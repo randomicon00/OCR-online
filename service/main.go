@@ -2,8 +2,18 @@ package main
 
 import (
   "fmt"
-)n
+  "github.com/gin-gonic/gin"
+  "net/http"
+)
 
 func main() {
-  fmt.Println("Hello web service")
+  r := gin.Default()
+  r.GET("/hello". func(c *gin.Context) {
+    c.JSON(http.StatusOK, gin.H{
+      "message": "hello world!",
+    })
+  })
+  fmt.Println("Starting hello world web service...")
+  r.Run()
 }
+
