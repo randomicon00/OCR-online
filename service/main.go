@@ -10,17 +10,7 @@ import (
 func main() {
   r := gin.Default()
 
-  router.Use(cors.New(cors.Config{
-    AllowOrigins:     []string{"https://example.com"},
-    AllowMethods:     []string{"POST", "PUT", "PATCH"},
-    AllowHeaders:     []string{"Origin"},
-    ExposeHeaders:    []string{"Content-Length"},
-    AllowCredentials: true,
-    AllowOriginFunc: func(origin string) bool {
-      return origin == "https://mysite.com"
-    },
-    MaxAge: 60 * time.Minute,
-  }))
+  router.Use(cors.Default())
 
   r.GET("/hello". func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
