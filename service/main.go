@@ -12,12 +12,25 @@ func main() {
 
   router.Use(cors.Default())
 
-  r.GET("/hello". func(c *gin.Context) {
+  r.POST("/upload", func(c *gin.Context) {
+     c.JSON(http.StatusOK, gin.H{
+        "message": "upload success!",
+     })
+  })
+
+  r.GET("/heatlh", func(c *gin.Context) {
+     c.JSON(http.StatusOK, gin.H{
+        "message": "is online!",
+     })
+  })
+
+  r.GET("/result". func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
-      "message": "hello world!",
+      "message": "my ocr text!",
     })
   })
-  fmt.Println("Starting hello world web service...")
+
+  fmt.Println("Starting OCR web service...")
   r.Run()
 }
 
