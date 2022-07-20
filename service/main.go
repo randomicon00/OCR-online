@@ -31,7 +31,7 @@ func main() {
     })
   })
 
-  fmt.Println("Starting OCR web service...")
+  fmt.Println("Starting OCR web service on port 8080")
   r.Run()
 }
 
