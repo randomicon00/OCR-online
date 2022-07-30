@@ -12,7 +12,7 @@ func main() {
   r := gin.Default()
 
   router.Use(cors.Default())
-
+  // TODO: Router should be in its own file/package
   r.POST("/upload", func(c *gin.Context) {
      c.JSON(http.StatusOK, gin.H{
         "message": "upload success!",
