@@ -4,7 +4,7 @@ import logo from './logo.svg';
 function App() {
   return (
     <div className="App">
-       OCR online conversion homepage!
+      <p>OCR online conversion homepage!</p>
     </div>
   );
 }
