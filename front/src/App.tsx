@@ -5,7 +5,7 @@ import Upload from './components/Upload';
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-3xl font-bold underline">
       <p>OCR online conversion homepage!</p>
       <div>
         <Upload />
