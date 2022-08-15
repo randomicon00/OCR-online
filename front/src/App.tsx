@@ -8,7 +8,7 @@ function App() {
     <div className="text-3xl font-bold underline">
       <p>OCR online conversion homepage!</p>
       <div>
-        <Upload />
+        <Upload name="image upload" />
       </div>
     </div>
   );

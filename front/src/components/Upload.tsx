@@ -1,7 +1,7 @@
-const Upload = () => {
+const Upload = ({ name }) => {
   return (
-    <div>
-      <input id="img-upload" type="file" name="upload" /> 
+    <div className="p-3 text-xs no-underline">
+      <input id="img-upload" type="file" name={name} /> 
     </div>
   )
 }
