@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import Upload from './components/Upload';
-
+import Intro from "./components/Intro";
+import Convert from "./components/Convert";
+import Benefits from "./components/benefits";
 
 function App() {
   return (
     <div className="text-3xl font-bold underline">
-      <p>OCR online conversion homepage!</p>
-      <div>
-        <Upload name="image upload" />
-      </div>
+      <Intro />
+      <Convert />
+      <Benefits />
     </div>
   );
 }
