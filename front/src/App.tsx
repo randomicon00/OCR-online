@@ -5,7 +5,7 @@ import Benefits from "./components/benefits";
 
 function App() {
   return (
-    <div className="flex flex-row">
+    <div className="flex justify-center items-center">
       <Intro />
       <Convert />
       <Benefits />
