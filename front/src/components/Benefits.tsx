@@ -9,10 +9,16 @@ const benefits = [
   { title: "free tool", text: "some text", icon: "icon url here" },
 ];
 
-const Benefit = ({ title, text, icon }) => {
+type BenefitsProps = {
+  title: string;
+  text: string;
+  icon: string; //TODO use an element here: JSX.Element or ReactNode
+};
+
+const Benefit = ({ title, text, icon }: BenefitsProps) => {
   return (
     <div>
-      <h1><i name={icon}></i>{title}</h1>
+      <h1><i>{icon}</i>{title}</h1>
       <p>{text}</p>
     </div>
   );
@@ -22,7 +28,7 @@ const Benefit = ({ title, text, icon }) => {
 const Benefits = () => {
   return (
     <div>
-      {benefits.map(benefit => (
+      {benefits.map(({ title, text, icon }) => (
         <Benefit 
           title={title} 
           text={text}

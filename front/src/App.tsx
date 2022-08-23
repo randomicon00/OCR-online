@@ -1,15 +1,16 @@
 import React from 'react';
 import Intro from "./components/Intro";
 import Convert from "./components/Convert";
-import Benefits from "./components/benefits";
+import Benefits from "./components/Benefits";
+import Layout from "./components/Layout";
 
-function App() {
+const App = () => {
   return (
-    <div className="flex justify-center items-center">
+    <Layout>
       <Intro />
       <Convert />
       <Benefits />
-    </div>
+    </Layout>
   );
 }
 
