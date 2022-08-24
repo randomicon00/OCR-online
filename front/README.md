@@ -1,6 +1,12 @@
 ## OCR Online Front-end Application
 
-The current application is the front facing application. 
+The application is divided into two separate application.
+Frontend is build with React.
+Backend is using Golang.
 
-#TODO
-Add readme instructions here.
+#Frontend application
+Add instructions here.
+
+#Server API and backend application
+Add instructions here.
+
