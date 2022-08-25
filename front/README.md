@@ -5,8 +5,11 @@ Frontend is build with React.
 Backend is using Golang.
 
 #Frontend application
-Add instructions here.
+The front end application can be run using: `npm run start`
 
 #Server API and backend application
 Add instructions here.
+
+#TODO 
+Complete Readme.md documentation
 
