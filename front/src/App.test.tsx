@@ -4,7 +4,7 @@ import App from './App';
 
 test('renders ocr title text', () => {
   render(<App />);
-  const titleElement = screen.getByText(/ocr online/i);
+  const titleElement = screen.getByText(/image to text conversion/i);
   expect(titleElement).toBeInTheDocument();
 });
 
