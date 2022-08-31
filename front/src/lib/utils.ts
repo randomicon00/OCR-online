@@ -1,2 +1,9 @@
-//TODO Add all utilities functions here.
+const formatNumber = () => {};
+
+const formatDate = () => {};
+
+export {
+  formatNumber,
+  formatDate,
+};
 
