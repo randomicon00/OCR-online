@@ -1,12 +1,12 @@
 import React from "react";
 
 const benefits = [
-  { title: "use online", text: "some text", icon: "icon url here" },
-  { title: "image to text", text: "some text", icon: "icon url here" },
-  { title: "convert PDF to DOC", text: "some text", icon: "icon url here" },
-  { title: "works with iOS and Android", text: "some text", icon: "icon url here" },
-  { title: "secure conversion", text: "some text", icon: "icon url here" },
-  { title: "free tool", text: "some text", icon: "icon url here" },
+  { title: "use online", text: "paragraph", icon: "icon url here" },
+  { title: "image to text", text: "paragraph", icon: "icon url here" },
+  { title: "convert PDF to DOC", text: "paragraph", icon: "icon url here" },
+  { title: "works with iOS and Android", text: "paragraph", icon: "icon url here" },
+  { title: "secure conversion", text: "paragraph", icon: "icon url here" },
+  { title: "free tool", text: "paragraph", icon: "icon url here" },
 ];
 
 type BenefitsProps = {
