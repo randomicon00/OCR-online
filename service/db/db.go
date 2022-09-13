@@ -17,6 +17,7 @@ const (
   dbname   = "dbname"
 )
 
+// TODO Should return the DB connection
 func DB() {
   fmt.Println("this is where db code should be..")
 }
