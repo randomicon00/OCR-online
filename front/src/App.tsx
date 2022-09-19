@@ -6,11 +6,13 @@ import Layout from "./components/Layout";
 
 const App = () => {
   return (
+    <div id="container">
     <Layout>
       <Intro />
       <Convert />
       <Benefits />
     </Layout>
+    </div>
   );
 }
 
