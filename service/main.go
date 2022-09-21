@@ -13,7 +13,6 @@ func main() {
   r := gin.Default()
 
   // TODO add the right import and understand how it works
-  // TODO 
   models.ConnectDatabase()
 
   router.Use(cors.Default())
