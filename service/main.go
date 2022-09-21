@@ -2,14 +2,19 @@ package main
 
 import (
   "fmt"
-
-  "github.com/gin-gonic/gin"
   "net/http"
+  
+  "github.com/gin-gonic/gin"
   "github.com/gin-contrib/cors"
+  "github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
 func main() {
   r := gin.Default()
+
+  // TODO add the right import and understand how it works
+  // TODO 
+  models.ConnectDatabase()
 
   router.Use(cors.Default())
   // TODO: Router should be in its own file/package
