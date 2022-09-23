@@ -1,9 +1,11 @@
 package main
 
 import (
-  "fmt"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
-func routes() {
-  fmt.Println("This is where the route setup should be located.")
+func GetAllConversions(c *gin.Context) {
+	c.JSON(http.statusOK, gin.H{"data": "sample data"})
 }
