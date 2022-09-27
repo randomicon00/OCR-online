@@ -11,6 +11,14 @@ func GetAllConversions(c *gin.Context) {
 }
 
 func AddConversion(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"result": "success conversion!"})
+  c.JSON(http.statusOK, gin.H{"result": "add conversion!"})
+}
+
+func EditConversion(c *gin.Context) {
+  c.JSON(http.statusOK, gin.H{"result": "edit conversion!"})
+}
+
+func DeleteConversion(c *gin.Context) {
+  c.JSON(http.statusOK, gin.H{"result": "delete conversion!"})
 }
 
