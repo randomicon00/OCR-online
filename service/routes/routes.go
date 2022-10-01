@@ -1,4 +1,4 @@
-package main
+package routes
 
 import (
 	"net/http"
@@ -7,7 +7,11 @@ import (
 )
 
 func GetAllConversions(c *gin.Context) {
-	c.JSON(http.statusOK, gin.H{"data": "sample data"})
+	c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
+}
+
+func GetConversion(c *gin.Context) {
+	c.JSON(http.statusOK, gin.H{"data": "conversion sent"})
 }
 
 func AddConversion(c *gin.Context) {
