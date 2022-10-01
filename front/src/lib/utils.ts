@@ -1,10 +1,10 @@
 const formatNumber = () => {};
 const formatDate = () => {};
-const formatFileSize = () => {};
+const formatFileSizeUnit = () => {};
 
 export {
   formatNumber,
   formatDate,
-  formatFileSize,
+  formatFileSizeUnit,
 }
 
