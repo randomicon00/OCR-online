@@ -18,3 +18,4 @@ func ConnectDatabase() {
 
 	DB = database
 }
+
