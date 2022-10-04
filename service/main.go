@@ -12,11 +12,11 @@ import (
 func main() {
 	r := gin.Default()
 
-	// TODO add the right import and understand how it works
+	// TODO Add the right import and understand how it works
 	models.ConnectDatabase()
 
 	router.Use(cors.Default())
-	// TODO: Router should be in its own file/package
+	// TODO Router should be in its own file/package
 	r.POST("/upload", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "upload success!",
