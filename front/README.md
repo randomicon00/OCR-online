@@ -3,11 +3,11 @@
 Client server application which uses ReactJS in the front-end and
 Go in the back-end.
 
-#Frontend application
+#User facing application
 The front end application can be run using: `npm run start`
 #TODO: To be completed.
 
-#Server API and backend application
+#Image to text back-end service
 The backend server is built using the Go programming language.
 #TODO: To be completed.
 
