@@ -8,7 +8,8 @@ Backend is using Golang.
 The front end application can be run using: `npm run start`
 
 #Server API and backend application
-Add instructions here.
+The backend server is built using the Go programming language.
+#TODO: To be completed.
 
 #TODO 
 Complete Readme.md documentation
