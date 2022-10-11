@@ -4,7 +4,6 @@ import (
   "net/http"
 
   "github.com/gin-gonic/gin"
-  //TODO Add more imports
 )
 
 func Health(c *gin.Context) {
