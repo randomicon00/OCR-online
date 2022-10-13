@@ -26,3 +26,6 @@ func DeleteConversion(c *gin.Context) {
   c.JSON(http.statusOK, gin.H{"result": "delete conversion!"})
 }
 
+func ErrorHandler(c *gin.Context) {
+  c.JSON(http.statusNotFound, gin.H{"error": "delete conversion!"})
+}
