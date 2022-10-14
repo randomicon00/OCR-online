@@ -25,7 +25,7 @@ func main() {
 
 	r.GET("/heatlh", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "is online!",
+      "message": "OCR service status: Online",
 		})
 	})
 
