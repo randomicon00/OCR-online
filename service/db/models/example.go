@@ -6,9 +6,8 @@ import (
 
 type User struct {
   ID          uint   `json:"id" gorm:"primary_key"`
-  UserName    string `json:"username"` 
+  Username    string `json:"username"` 
   Password    string `json:"password"`
-  Age         uint   `json:"age"`
 }
 
 type Entry struct {
