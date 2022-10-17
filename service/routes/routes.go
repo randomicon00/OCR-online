@@ -1,31 +1,39 @@
 package routes
 
 import (
-	"net/http"
+  "log"
+  "net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func GetAllConversions(c *gin.Context) {
+  log.Println("GetAllConversions Handlers called")
 	c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
 }
 
 func GetConversion(c *gin.Context) {
-	c.JSON(http.statusOK, gin.H{"data": "conversion sent"})
+  log.Println("GetConversion Handlers called")
+  c.JSON(http.statusOK, gin.H{"data": "conversion sent"})
 }
 
 func AddConversion(c *gin.Context) {
+  log.Println("AddConversion Handlers called")
   c.JSON(http.statusOK, gin.H{"result": "add conversion!"})
 }
 
 func EditConversion(c *gin.Context) {
+  log.Println("EditConversion Handlers called")
   c.JSON(http.statusOK, gin.H{"result": "edit conversion!"})
 }
 
 func DeleteConversion(c *gin.Context) {
+  log.Println("DeleteConversions Handlers called")
   c.JSON(http.statusOK, gin.H{"result": "delete conversion!"})
 }
 
-func ErrorHandler(c *gin.Context) {
-  c.JSON(http.statusNotFound, gin.H{"error": "delete conversion!"})
+func NotFoundHandler(c *gin.Context) {
+  log.Println("NotFoundHandler Handlers called")
+  c.JSON(http.statusNotFound, gin.H{"error": "Not found!"})
 }
+
