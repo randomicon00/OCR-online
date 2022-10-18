@@ -23,18 +23,21 @@ func main() {
 		})
 	})
 
+  // TODO Move callback to controller
 	r.GET("/heatlh", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
       "message": "OCR service status: Online",
 		})
 	})
+  
 
+  // TODO Move callback to controller
 	r.GET("/result", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "my ocr text!",
 		})
 	})
 
-	fmt.Println("Starting OCR web service on port 8080...")
+	log.Println("Starting OCR web service on port 8080...")
   r.Run(":8080")
 }
