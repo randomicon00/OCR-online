@@ -27,3 +27,7 @@ func DeleteOne(c *gin.Context) {
 }
 
 //TODO Add all other functions and use authentication for all
+
+func GetAllByDate(c *gin.Context) {
+  c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
+}
