@@ -7,23 +7,23 @@ import (
 )
 
 func Health(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"response": "all is ok"})
+  c.JSON(http.StatusOK, gin.H{"response": "all is ok"})
 }
 
 func GetAll(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"response": "got all entries!"})
+  c.JSON(http.StatusOK, gin.H{"response": "got all entries!"})
 }
 
 func CreateOne(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"response": "created one entry!"})
+  c.JSON(http.StatusOK, gin.H{"response": "created one entry!"})
 }
 
 func EditOne(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"response": "edited one entry!"})
+  c.JSON(http.StatusOK, gin.H{"response": "edited one entry!"})
 }
 
 func DeleteOne(c *gin.Context) {
-  c.JSON(http.statusOK, gin.H{"response": "deleted one entry!"})
+  c.JSON(http.StatusOK, gin.H{"response": "deleted one entry!"})
 }
 
 //TODO Add all other functions and use authentication for all
@@ -31,3 +31,4 @@ func DeleteOne(c *gin.Context) {
 func GetAllByDate(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
 }
+
