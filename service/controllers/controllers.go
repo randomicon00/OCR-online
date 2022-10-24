@@ -7,8 +7,8 @@ import (
   "github.com/gin-gonic/gin"
 )
 
-func Health(c *gin.Context) {
-  log.Println("Health request");
+func HealthCheck(c *gin.Context) {
+  log.Println("HealthCheck request");
   c.JSON(http.StatusOK, gin.H{"response": "all is ok"})
 }
 
