@@ -8,12 +8,12 @@ const secure_conversion = ``;
 const free_tool = ``;
 
 const benefits = [
-  { title: "use online", text: use_online, icon: "icon url here" },
-  { title: "image to text", text: img_to_txt, icon: "icon url here" },
-  { title: "convert PDF to DOC", text: pdf_to_doc, icon: "icon url here" },
-  { title: "works with iOS and Android", text: iOS_Android, icon: "icon url here" },
-  { title: "secure conversion", text: secure_conversion, icon: "icon url here" },
-  { title: "free tool", text: free_tool, icon: "icon url here" },
+  { title: "Use online", text: use_online, icon: "icon url here" },
+  { title: "Image to text", text: img_to_txt, icon: "icon url here" },
+  { title: "Convert PDF to DOC", text: pdf_to_doc, icon: "icon url here" },
+  { title: "Works with iOS and Android", text: iOS_Android, icon: "icon url here" },
+  { title: "Secure conversion", text: secure_conversion, icon: "icon url here" },
+  { title: "Free tool", text: free_tool, icon: "icon url here" },
 ];
 
 type BenefitsProps = {
