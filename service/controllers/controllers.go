@@ -39,3 +39,5 @@ func GetAllByDate(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
 }
 
+// TODO add integration tests
+
