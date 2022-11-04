@@ -9,6 +9,10 @@ import (
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
+func SetupRouter() {
+  // TODO tomorrow add router paths here.
+}
+
 func main() {
 	r := gin.Default()
 
