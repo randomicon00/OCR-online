@@ -8,6 +8,10 @@ const App = () => {
   const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
 
+  const toggleVisibility = () => {
+    setShow((show) => !show); 
+  }
+
   return (
     <div id="container">
     <Layout>
@@ -15,7 +19,7 @@ const App = () => {
       <Convert />
       <Benefits />
     </Layout>
-      <button onClick={() => setShow((show) => !show)}>Toggle Show</button>
+      <button onClick={toggleVisibility}>Toggle Show</button>
     </div>
   );
 }
