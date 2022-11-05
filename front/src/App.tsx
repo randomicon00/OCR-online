@@ -6,7 +6,8 @@ import Layout from "./components/Layout";
 
 const App = () => {
   const [state, setState] = useState(0);
-  
+  const [show, setShow] = useState(false);
+
   return (
     <div id="container">
     <Layout>
@@ -14,6 +15,7 @@ const App = () => {
       <Convert />
       <Benefits />
     </Layout>
+      <button onClick={() => setShow((show) => !show)}>Toggle Show</button>
     </div>
   );
 }
