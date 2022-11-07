@@ -22,5 +22,7 @@ type Entry struct {
 type Config struct {
   Address    string
   Port       string
+  tls        bool
 }
+
 
