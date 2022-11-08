@@ -17,6 +17,11 @@ func GetAll(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{"response": "got all entries!"})
 }
 
+func GetAllByDate(c *gin.Context) {
+  log.Println("GetAllByDate request");
+  c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
+}
+
 func CreateOne(c *gin.Context) {
   log.Println("CreateOne request");
   c.JSON(http.StatusOK, gin.H{"response": "created one entry!"})
@@ -33,11 +38,5 @@ func DeleteOne(c *gin.Context) {
 }
 
 //TODO Add all other functions and use authentication for all
-
-func GetAllByDate(c *gin.Context) {
-  log.Println("GetAllByDate request");
-  c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
-}
-
 // TODO add integration tests
 
