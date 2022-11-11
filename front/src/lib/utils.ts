@@ -1,6 +1,14 @@
-const formatNumber = () => {};
-const formatDate = () => {};
-const formatFileSizeUnit = () => {};
+const formatNumber = () => {
+  console.log("todo format number");
+};
+
+const formatDate = () => {
+   console.log("todo format date");
+};
+
+const formatFileSizeUnit = () => {
+  console.log("todo format file size unit");
+};
 
 const getUnit = () => {
   const timeUnits = ["s", "ms", "us"]; 
