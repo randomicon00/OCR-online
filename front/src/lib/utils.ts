@@ -3,11 +3,11 @@ const formatNumber = () => {
 };
 
 const formatDate = () => {
-   console.log("todo format date");
+   console.log("TODO format date");
 };
 
 const formatFileSizeUnit = () => {
-  console.log("todo format file size unit");
+  console.log("TODO format file size unit");
 };
 
 const getUnit = () => {
