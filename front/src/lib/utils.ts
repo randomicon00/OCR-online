@@ -1,5 +1,5 @@
 const formatNumber = () => {
-  console.log("todo format number");
+  console.log("TODO format number");
 };
 
 const formatDate = () => {
