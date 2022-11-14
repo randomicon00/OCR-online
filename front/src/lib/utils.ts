@@ -21,6 +21,9 @@ const getUnit = () => {
   return "us";
 };
 
+const roundNumber = () => {
+  console.log("TODO round number with the different use cases")
+};
 
 export {
   formatNumber,
