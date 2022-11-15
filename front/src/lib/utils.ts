@@ -1,3 +1,5 @@
+// Utility functions go here.
+
 const formatNumber = () => {
   console.log("TODO format number");
 };
