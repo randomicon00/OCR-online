@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Intro from "./components/Intro";
 import Convert from "./components/Convert";
 import Benefits from "./components/Benefits";
@@ -15,14 +15,18 @@ const App = () => {
 
   useEffect(() => {
     const el = ref.current;
+    
+    const handleClick = (e) => {
+      console.log("Clicked!");
+    };
+    
     if (ref.current) {
-      el.addEventListener((e) => {
-        console.log("Hello world");
-      });
+      el.addEventListener("click", handleClick);
     }
+    
     return () => {
-      //el.r
-    }    
+      el.removeEventListener("click", handleClick);
+    };    
   }, []);
   
   return (
