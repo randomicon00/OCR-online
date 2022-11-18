@@ -9,12 +9,13 @@ import (
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
-func SetupRouter() {
-  // TODO tomorrow add router paths here.
+func SetupBasicRouter() *gin.Engine {
+   r := gin.Default()
+   return r
 }
 
 func main() {
-	r := gin.Default()
+	r := SetupBasicRouter()
 
 	// TODO Add the right import and understand how it works
 	models.ConnectDatabase()
