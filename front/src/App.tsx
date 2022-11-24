@@ -5,7 +5,6 @@ import Benefits from "./components/Benefits";
 import Layout from "./components/Layout";
 
 //Todo include a router here.
-
 const App = () => {
   const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
