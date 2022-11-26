@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Todo complete the whole list of handlers
 func GetAllConversions(c *gin.Context) {
   log.Println("GetAllConversions Handlers called")
 	c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
