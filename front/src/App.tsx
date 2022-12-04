@@ -32,15 +32,15 @@ const App = () => {
   
   return (
     <div id="container" style={{ backgroundColor: "grey" }}>
-    <Layout>
-      <Intro />
-      <Convert />
-      <Benefits />
-    </Layout>
-      <button onClick={toggle}>Toggle Visibility</button>
+      <Layout>
+        <Intro />
+        <Convert />
+        <Benefits />
+      </Layout>
       <div>
         <div id="listener" ref={ref}>Hello world</div>
-      </div> 
+      </div>
+      <button onClick={toggle}>Toggle Visibility</button>
     </div>
   );
 }
