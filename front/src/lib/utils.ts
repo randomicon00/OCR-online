@@ -29,8 +29,10 @@ const roundNumber = () => {
 };
 
 export {
+  getUnit,
+  roundNumber,
   formatNumber,
   formatDate,
   formatFileSizeUnit,
-}
+};
 
