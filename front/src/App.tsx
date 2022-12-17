@@ -15,6 +15,7 @@ const App = () => {
   }
 
   useEffect(() => {
+    // Element to which we attach a listener
     const el = ref.current;
     
     const handleClick = (e) => {
