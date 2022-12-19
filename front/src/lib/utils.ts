@@ -1,4 +1,3 @@
-// Utility functions go here.
 import moment from "moment.js";
 
 const formatNumber = () => {
@@ -25,6 +24,7 @@ const getUnit = () => {
 };
 
 const roundNumber = () => {
+  // Use Math package.
   console.log("TODO round number with the different use cases")
 };
 
