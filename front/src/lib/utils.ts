@@ -1,38 +1,23 @@
 import moment from "moment.js";
 
-const formatNumber = () => {
-  console.log("TODO format number");
-};
-
-const formatDate = () => {
-   console.log("TODO format date");
-};
-
-const formatFileSizeUnit = () => {
-  console.log("TODO format file size unit");
-};
-
-const getUnit = () => {
-  const timeUnits = ["s", "ms", "us"]; 
-  if (Math.floor(num / 1000000) > 0) { 
-    return "s";
+const formatSize = (size) => {
+  if (size >= 1073741824) {
+    return (size / 1073741824).toFixed(2) + " GB";
+  } else if (size >= 1048576) {
+    return (size / 1048576).toFixed(2) + " MB";
+  } else if (size >= 1024) {
+    return (size / 1024).toFixed(2) + " KB";
+  } else {
+    return size + " B";
   }
-  if (Math.floor(num / 1000) > 0) { 
-    return "ms"; 
-  }
-  return "us";
 };
 
-const roundNumber = () => {
-  // Use Math package.
-  console.log("TODO round number with the different use cases")
+const formatDate = (date, format) => {
+  return moment(date).format(format);
 };
 
 export {
-  getUnit,
-  roundNumber,
-  formatNumber,
+  formatSize,
   formatDate,
-  formatFileSizeUnit,
 };
 
