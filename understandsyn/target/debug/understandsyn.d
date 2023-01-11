@@ -1,1 +1,0 @@
-/Users/mehdiakiki/Documents/OCR-online/understandsyn/target/debug/understandsyn: /Users/mehdiakiki/Documents/OCR-online/understandsyn/src/lib.rs /Users/mehdiakiki/Documents/OCR-online/understandsyn/src/main.rs
