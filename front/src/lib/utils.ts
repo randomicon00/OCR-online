@@ -13,7 +13,8 @@ const formatSize = (size) => {
 };
 
 const formatDate = (date, format) => {
-  return moment(date).format(format);
+  const formattedDate = moment(date).format(format); 
+  return formattedDate;
 };
 
 export {
