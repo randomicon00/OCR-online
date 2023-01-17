@@ -47,3 +47,9 @@ func NotFoundHandler(c *gin.Context) {
   c.JSON(http.statusNotFound, gin.H{"error": "Not found!"})
 }
 
+func Dummy(c *gin.Context) {
+  c.JSON(http.statusOK, gin.H{"message": "Dummy"})
+}
+
+
+
