@@ -4,7 +4,6 @@ import Convert from "./components/Convert";
 import Benefits from "./components/Benefits";
 import Layout from "./components/Layout";
 
-//Todo include a router here.
 const App = () => {
   const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
@@ -12,7 +11,7 @@ const App = () => {
 
   const toggle = () => {
     setShow((show) => !show); 
-  }
+  };
 
   useEffect(() => {
     // Element to which we attach a listener

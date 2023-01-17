@@ -37,6 +37,3 @@ func DeleteOne(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{"response": "deleted one entry!"})
 }
 
-//TODO Add all other functions and use authentication for all
-// TODO add integration tests
-
