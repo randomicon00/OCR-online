@@ -1,5 +1,6 @@
 import moment from "moment.js";
 
+// Add documentation to this function
 const formatSize = (size) => {
   if (size >= 1073741824) {
     return (size / 1073741824).toFixed(2) + " GB";
