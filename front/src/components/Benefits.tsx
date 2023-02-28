@@ -19,7 +19,7 @@ const benefits = [
 type BenefitsProps = {
   title: string;
   text: string;
-  icon: string; //TODO use an element here: JSX.Element or ReactNode Heroicons!
+  icon: string; //TODO Replace with: JSX.Element or ReactNode Heroicons!
 };
 
 const Benefit = ({ title, text, icon }: BenefitsProps) => {
