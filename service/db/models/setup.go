@@ -19,7 +19,7 @@ const (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	
+
   psqlInfo := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s" +
   "sslmode=%s TimeZone=Asia/Pacific",
   host, user, password, dbname, port sslmode)
