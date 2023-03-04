@@ -9,7 +9,7 @@ import (
 
 func GetAllConversions(c *gin.Context) {
   log.Println("GetAllConversions Handlers called")
-	c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
+  c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
 }
 
 func GetConversion(c *gin.Context) {
