@@ -1,11 +1,11 @@
 import React from "react";
 
-const use_online = ``;
-const img_to_txt = ``;
-const pdf_to_doc = ``;
-const iOS_Android = ``;
-const secure_conversion = ``;
-const free_tool = ``;
+const use_online = `put text here...`;
+const img_to_txt = `put text here...`;
+const pdf_to_doc = `put text here...`;
+const iOS_Android = `put text here...`;
+const secure_conversion = `put text here...`;
+const free_tool = `put text here...`;
 
 const benefits = [
   { title: "Use online", text: use_online, icon: "icon url here" },
@@ -30,7 +30,6 @@ const Benefit = ({ title, text, icon }: BenefitsProps) => {
     </div>
   );
 }
-
 
 const Benefits = () => {
   return (
