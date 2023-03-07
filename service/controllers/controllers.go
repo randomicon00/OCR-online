@@ -37,3 +37,8 @@ func DeleteOne(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{"response": "deleted one entry!"})
 }
 
+func GetStats(c *gin.Context) {
+  log.Println("GetStats request");
+  c.JSON(http.StatusOK, gin.H{"response": "got stats!"})
+}
+
