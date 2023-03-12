@@ -7,11 +7,6 @@ import (
   "github.com/gin-gonic/gin"
 )
 
-func HealthCheck(c *gin.Context) {
-  log.Println("HealthCheck request");
-  c.JSON(http.StatusOK, gin.H{"response": "all is ok"})
-}
-
 func GetAll(c *gin.Context) {
   log.Println("GetAll request");
   c.JSON(http.StatusOK, gin.H{"response": "got all entries!"})
@@ -40,5 +35,10 @@ func DeleteOne(c *gin.Context) {
 func GetStats(c *gin.Context) {
   log.Println("GetStats request");
   c.JSON(http.StatusOK, gin.H{"response": "got stats!"})
+}
+
+func HealthCheck(c *gin.Context) {
+  log.Println("HealthCheck request");
+  c.JSON(http.StatusOK, gin.H{"response": "all is ok"})
 }
 
