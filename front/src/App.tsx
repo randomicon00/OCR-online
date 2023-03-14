@@ -31,7 +31,7 @@ const App = () => {
   }, []);
   
   return (
-    <div id="container" style={{ backgroundColor: "grey" }}>
+    <div id="main"" style={{ backgroundColor: "grey" }}>
       <Layout>
         <Intro />
         <Convert />
