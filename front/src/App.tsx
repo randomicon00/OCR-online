@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 const App = () => {
   const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef();
 
   const toggle = () => {
     setShow((show) => !show); 
