@@ -29,7 +29,7 @@ func GetAllConversionErrors(c *gin.Context) {
 
 func AddConversionError(c *gin.Context) {
   log.Println("AddConversionError Handlers called")
-  c.JSON(http.statusOK, gin.H{"result": "add conversion!"})
+  c.JSON(http.statusCreated, gin.H{"result": "add conversion!"})
 }
 
 func EditConversion(c *gin.Context) {
