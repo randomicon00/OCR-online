@@ -49,7 +49,7 @@ func NotFoundHandler(c *gin.Context) {
 
 func GetStats(c *gin.Context) {
     log.Println("GetStats request")
-    stats, err := service.GetConversionStats()
+    stats, err := logic.GetConversionStats()
     if err != nil {
         log.Println("Error getting conversion statistics:", err)
         c.JSON(http.StatusInternalServerError, gin.H{
