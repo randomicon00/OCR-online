@@ -47,3 +47,16 @@ func NotFoundHandler(c *gin.Context) {
   c.JSON(http.statusNotFound, gin.H{"error": "Not found!"})
 }
 
+func GetStats(c *gin.Context) {
+    log.Println("GetStats request")
+    stats, err := service.GetConversionStats()
+    if err != nil {
+        log.Println("Error getting conversion statistics:", err)
+        c.JSON(http.StatusInternalServerError, gin.H{
+            "error": "Failed to get conversion statistics",
+        })
+        return
+    }
+    c.JSON(http.StatusOK, stats)
+}
+
