@@ -4,41 +4,57 @@ import (
   "log"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/example/db"
 )
 
-func GetAll(c *gin.Context) {
-  log.Println("GetAll request");
-  c.JSON(http.StatusOK, gin.H{"response": "got all entries!"})
+func GetAll() (interface{}, int) {
+  log.Println("GetAll request")
+
+  var entries []db.Entry
+  result := db.GetDB().Find(&entries)
+  if result.Error != nil {
+    return nil, http.StatusInternalServerError
+  }
+
+  return entries, http.StatusOK
 }
 
-func GetAllByDate(c *gin.Context) {
-  log.Println("GetAllByDate request");
-  c.JSON(http.StatusOK, gin.H{"response": "got all entries by date"})
+func GetAllByDate() (interface{}, int) {
+  log.Println("GetAllByDate request")
+
+  // implementation here
+
+  return nil, http.StatusOK
 }
 
-func CreateOne(c *gin.Context) {
-  log.Println("CreateOne request");
-  c.JSON(http.StatusOK, gin.H{"response": "created one entry!"})
+func CreateOne() (interface{}, int) {
+  log.Println("CreateOne request")
+
+  // implementation here
+
+  return nil, http.StatusOK
 }
 
-func EditOne(c *gin.Context) {
-  log.Println("EditOne request");
-  c.JSON(http.StatusOK, gin.H{"response": "edited one entry!"})
+func EditOne() (interface{}, int) {
+  log.Println("EditOne request")
+
+  // implementation here
+
+  return nil, http.StatusOK
 }
 
-func DeleteOne(c *gin.Context) {
-  log.Println("DeleteOne request");
-  c.JSON(http.StatusOK, gin.H{"response": "deleted one entry!"})
+func DeleteOne() (interface{}, int) {
+  log.Println("DeleteOne request")
+
+  // implementation here
+
+  return nil, http.StatusOK
 }
 
-func GetStats(c *gin.Context) {
-  log.Println("GetStats request");
-  c.JSON(http.StatusOK, gin.H{"response": "got stats!"})
-}
+func GetStats() (interface{}, int) {
+  log.Println("GetStats request")
 
-func HealthCheck(c *gin.Context) {
-  log.Println("HealthCheck request");
-  c.JSON(http.StatusOK, gin.H{"response": "all is ok"})
-}
+  // implementation here
 
+  return nil, http.StatusOK
+}
