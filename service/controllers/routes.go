@@ -43,8 +43,13 @@ func DeleteConversion(c *gin.Context) {
 }
 
 func NotFoundHandler(c *gin.Context) {
-  log.Println("NotFoundHandler Handlers called")
-  c.JSON(http.statusNotFound, gin.H{"error": "Not found!"})
+  // Log the request path that triggered the 404 error
+  log.Printf("404 Error: %s\n", c.Request.URL.Path)
+  
+  // Set the response status code to 404 and return an error message as JSON
+  c.JSON(http.StatusNotFound, gin.H{
+    "error": "The requested resource was not found on this server.",
+  })
 }
 
 func GetStats(c *gin.Context) {
