@@ -7,7 +7,7 @@ import (
   "github.com/example/db"
 )
 
-func GetAll() (interface{}, int) {
+func GetAll() ([]db.Entry, int) {
   log.Println("GetAll request")
 
   var entries []db.Entry
