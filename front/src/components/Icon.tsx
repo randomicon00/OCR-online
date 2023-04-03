@@ -6,4 +6,4 @@ const Icon = ({ iconUrl }: IconProps) => {
   return <img src={iconUrl} alt="" data-testid="icon" />;
 };
 
-export default   Icon;
+export default Icon;
