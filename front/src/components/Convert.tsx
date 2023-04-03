@@ -6,7 +6,6 @@ const Convert = () => {
       <p>Convert component...</p>
     </div>
   );
-}
+};
 
 export default Convert;
-

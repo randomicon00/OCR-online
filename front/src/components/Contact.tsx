@@ -19,6 +19,7 @@ const Contact = () => {
         <input type="submit" value="submit" />
       </form>
     </div>
-  )
-}
+  );
+};
 
+export default Contact;

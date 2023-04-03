@@ -10,4 +10,3 @@ The front end application can be run using: `npm run start`
 #Image to text back-end service
 The backend server is built using the Go programming language.
 #TODO: To be completed.
-

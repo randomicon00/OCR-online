@@ -15,8 +15,4 @@ const formatSize = (size) => {
 
 const formatDate = (date, format) => moment(date).format(format);
 
-export {
-  formatSize,
-  formatDate,
-};
-
+export { formatSize, formatDate };

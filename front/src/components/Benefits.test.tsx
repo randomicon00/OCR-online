@@ -7,11 +7,25 @@ describe("Benefits component", () => {
   it("renders all benefits with their titles and texts", () => {
     render(<Benefits />);
     expect(screen.getByText("Use online")).toBeInTheDocument();
-    expect(screen.getByText("Convert images to editable text")).toBeInTheDocument();
-    expect(screen.getByText("Convert PDF files to editable Word documents")).toBeInTheDocument();
-    expect(screen.getByText("Works on both iOS and Android devices")).toBeInTheDocument();
-    expect(screen.getByText("Secure conversion with encryption and automatic deletion of uploaded files")).toBeInTheDocument();
-    expect(screen.getByText("Completely free to use without any hidden fees or limits")).toBeInTheDocument();
+    expect(
+      screen.getByText("Convert images to editable text")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Convert PDF files to editable Word documents")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Works on both iOS and Android devices")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "Secure conversion with encryption and automatic deletion of uploaded files"
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "Completely free to use without any hidden fees or limits"
+      )
+    ).toBeInTheDocument();
   });
 
   it("renders all benefits with their icons", () => {

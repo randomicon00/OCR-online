@@ -11,4 +11,3 @@ const Button = ({ name }) => {
 };
 
 export default Button;
-

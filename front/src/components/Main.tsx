@@ -8,6 +8,6 @@ const Main = () => {
       </main>
     </div>
   );
-}
+};
 
 export default Main;
