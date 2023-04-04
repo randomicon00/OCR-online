@@ -13,6 +13,10 @@ const Contact = () => {
           <input type="email" />
         </label>
         <label>
+          Subject:
+          <input type="text" />
+        </label>
+        <label>
           Message:
           <textarea />
         </label>

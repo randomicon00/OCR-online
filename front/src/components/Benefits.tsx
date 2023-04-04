@@ -57,7 +57,7 @@ const Benefit = ({ title, text, icon }: BenefitsProps) => {
   return (
     <div>
       <div className="flex items-center">
-        {icon}
+        {icon} 
         <h1 className="ml-2 text-lg font-medium text-gray-900">{title}</h1>
       </div>
       <p className="mt-2 text-base text-gray-500">{text}</p>
