@@ -20,7 +20,7 @@ describe("Layout", () => {
     );
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("OCR")).toBeInTheDocument();
-    expect(screen.ggetByText("Contact")).toBeInTheDocument();
-    expect(screen.ggetByText("© 2023 OCR App")).toBeInTheDocument();
+    expect(screen.getByText("Contact")).toBeInTheDocument();
+    expect(screen.getByText("© 2023 OCR App")).toBeInTheDocument();
   });
 });
