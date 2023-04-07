@@ -4,7 +4,7 @@ import Layout from "./Layout";
 
 describe("Layout", () => {
   it("should render children", () => {
-    const { getByText } = render(
+    render(
       <Layout>
         <div>Test</div>
       </Layout>
@@ -13,7 +13,7 @@ describe("Layout", () => {
   });
 
   it("should render navigation and footer", () => {
-    const { getByText } = render(
+    render(
       <Layout>
         <div>Test</div>
       </Layout>
