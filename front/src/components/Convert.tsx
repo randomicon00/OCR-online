@@ -24,11 +24,12 @@ const Convert = () => {
     }
 
     if (status === "progress") {
-      return <p>Conversion in progress...</p>;
+
+      return <p>Text extraction from file is in progress...</p>;
     }
 
     if (status === "complete") {
-      return <p>Conversion complete!</p>;
+      return <p>Text extraction has been completed!</p>;
     }
   };
 
