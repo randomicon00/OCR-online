@@ -15,4 +15,13 @@ const formatSize = (size) => {
 
 const formatDate = (date, format) => moment(date).format(format);
 
-export { formatSize, formatDate };
+
+function countCharacters(str) {
+  // Remove whitespace from the beginning and end of the string
+  str = str.trim();
+
+  // Return the length of the string
+  return str.length;
+}
+
+export { formatSize, formatDate, countCharacters };
