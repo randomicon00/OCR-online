@@ -16,22 +16,16 @@ const formatSize = (size) => {
 const formatDate = (date, format) => moment(date).format(format);
 
 
-function countCharacters(str) {
-  // Remove whitespace from the beginning and end of the string
+const countCharacters = (str) => {
   str = str.trim();
 
-  // Return the length of the string
   return str.length;
 }
 
-function countWords(str) {
-  // Remove whitespace from the beginning and end of the string
+const countWords = (str) => {
   str = str.trim();
-
-  // Split the string into an array of words using whitespace as the delimiter
   var words = str.split(/\s+/);
 
-  // Return the number of words in the array
   return words.length;
 }
 
