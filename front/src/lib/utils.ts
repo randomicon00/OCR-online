@@ -24,4 +24,15 @@ function countCharacters(str) {
   return str.length;
 }
 
-export { formatSize, formatDate, countCharacters };
+function countWords(str) {
+  // Remove whitespace from the beginning and end of the string
+  str = str.trim();
+
+  // Split the string into an array of words using whitespace as the delimiter
+  var words = str.split(/\s+/);
+
+  // Return the number of words in the array
+  return words.length;
+}
+
+export { formatSize, formatDate, countCharacters, countWords };
