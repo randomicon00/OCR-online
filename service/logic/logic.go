@@ -19,7 +19,7 @@ func GetAll() ([]db.Entry, int) {
   return entries, http.StatusOK
 }
 
-func GetAllByDate() (interface{}, int) {
+func GetAllByDate(date string) (interface{}, int) {
   log.Println("GetAllByDate request")
 
   // implementation here
@@ -27,7 +27,7 @@ func GetAllByDate() (interface{}, int) {
   return nil, http.StatusOK
 }
 
-func CreateOne() (interface{}, int) {
+func CreateOne(item interface{}) (interface{}, int) {
   log.Println("CreateOne request")
 
   // implementation here
@@ -35,7 +35,7 @@ func CreateOne() (interface{}, int) {
   return nil, http.StatusOK
 }
 
-func EditOne() (interface{}, int) {
+func EditOne(id string) (interface{}, int) {
   log.Println("EditOne request")
 
   // implementation here
@@ -43,7 +43,7 @@ func EditOne() (interface{}, int) {
   return nil, http.StatusOK
 }
 
-func DeleteOne() (interface{}, int) {
+func DeleteOne(id string) (interface{}, int) {
   log.Println("DeleteOne request")
 
   // implementation here
