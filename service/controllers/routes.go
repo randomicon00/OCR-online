@@ -14,6 +14,8 @@ func GetAllConversions(c *gin.Context) {
 
 func GetConversion(c *gin.Context) {
   log.Println("GetConversion Handlers called")
+  id := c.Param("id")
+  // TODO Get the item by id
   c.JSON(http.statusOK, gin.H{"data": "conversion sent"})
 }
 
