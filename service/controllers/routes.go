@@ -36,11 +36,29 @@ func GetAllConversions(c *gin.Context) {
 	})
 }
 
+// GetConversion gets a single conversion by ID from the database
 func GetConversion(c *gin.Context) {
-  log.Println("GetConversion Handlers called")
-  id := c.Param("id")
-  // TODO Get the item by id
-  c.JSON(http.statusOK, gin.H{"data": "conversion sent"})
+	log.Println("GetConversion handler called")
+
+	id := c.Param("id")
+	var conversion Conversion
+	if err := db.First(&conversion, id).Error; err != nil {
+		if err == gorm.ErrRecordNotFound {
+			c.JSON(http.StatusNotFound, gin.H{
+				"error": "Conversion not found",
+			})
+			return
+		}
+
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to retrieve conversion from database",
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": conversion,
+	})
 }
 
 func AddConversion(c *gin.Context) {
