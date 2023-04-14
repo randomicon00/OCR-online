@@ -1,15 +1,22 @@
 package controllers
 
 import (
-  "log"
-  "net/http"
+	"log"
+	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
 )
 
-func GetAllConversions(c *gin.Context) {
-  log.Println("GetAllConversions Handlers called")
-  c.JSON(http.statusOK, gin.H{"data": "all conversions sent"})
+// Conversion represents the model for a conversion
+type Conversion struct {
+	gorm.Model
+	Amount     float64
+	From       string
+	To         string
+	Result     float64
+	Successful bool
 }
 
 func GetConversion(c *gin.Context) {
