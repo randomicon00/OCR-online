@@ -19,6 +19,16 @@ type Entry struct {
   Status     string 
 }
 
+// Conversion represents the model for a conversion
+type Conversion struct {
+	gorm.Model
+	Amount     float64
+	From       string
+	To         string
+	Result     float64
+	Successful bool
+}
+
 type Config struct {
   Address    string
   Port       string

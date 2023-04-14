@@ -9,16 +9,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// Conversion represents the model for a conversion
-type Conversion struct {
-	gorm.Model
-	Amount     float64
-	From       string
-	To         string
-	Result     float64
-	Successful bool
-}
-
 // GetAllConversions gets all conversions from the database
 func GetAllConversions(c *gin.Context) {
 	log.Println("GetAllConversions handler called")
@@ -192,5 +182,4 @@ func GetStats(c *gin.Context) {
         return
     }
     c.JSON(http.StatusOK, stats)
-}
-
+    }
