@@ -19,6 +19,23 @@ type Conversion struct {
 	Successful bool
 }
 
+// GetAllConversions gets all conversions from the database
+func GetAllConversions(c *gin.Context) {
+	log.Println("GetAllConversions handler called")
+
+	var conversions []Conversion
+	if err := db.Find(&conversions).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to retrieve conversions from database",
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": conversions,
+	})
+}
+
 func GetConversion(c *gin.Context) {
   log.Println("GetConversion Handlers called")
   id := c.Param("id")
