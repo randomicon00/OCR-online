@@ -104,7 +104,20 @@ func GetAllConversionErrors(c *gin.Context) {
 
 func AddConversionError(c *gin.Context) {
   log.Println("AddConversionError Handlers called")
-  c.JSON(http.statusCreated, gin.H{"result": "add conversion!"})
+  
+  var conversionError ConversionError
+  if err := c.ShouldBindJSON(&conversionError); err != nil {
+    c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+    return
+  }
+
+  // Use GORM to create a new conversion error
+  if err := db.Create(&conversionError).Error; err != nil {
+    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create conversion error"})
+    return
+  }
+
+  c.JSON(http.StatusCreated, gin.H{"data": conversionError})
 }
 
 func EditConversion(c *gin.Context) {
