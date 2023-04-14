@@ -154,16 +154,30 @@ func EditConversion(c *gin.Context) {
 
 func DeleteConversion(c *gin.Context) {
   log.Println("DeleteConversions Handlers called")
-  c.JSON(http.statusOK, gin.H{"result": "delete conversion!"})
+
+  id := c.Param("id")
+
+  var conversion Conversion
+  if err := db.First(&conversion, id).Error; err != nil {
+    c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
+    return
+  }
+
+  if err := db.Delete(&conversion).Error; err != nil {
+    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete conversion"})
+    return
+  }
+
+  c.JSON(http.StatusOK, gin.H{"data": true})
 }
 
-func NotFoundHandler(c *gin.Context) {
+func GetNotFound(c *gin.Context) {
   // Log the request path that triggered the 404 error
   log.Printf("404 Error: %s\n", c.Request.URL.Path)
-  
+
   // Set the response status code to 404 and return an error message as JSON
   c.JSON(http.StatusNotFound, gin.H{
-    "error": "The requested resource was not found on this server.",
+    "error": "Sorry, the requested resource was not found on this server.",
   })
 }
 
