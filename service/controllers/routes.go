@@ -122,7 +122,34 @@ func AddConversionError(c *gin.Context) {
 
 func EditConversion(c *gin.Context) {
   log.Println("EditConversion Handlers called")
-  c.JSON(http.statusOK, gin.H{"result": "edit conversion!"})
+
+  id := c.Param("id")
+
+  var conversion Conversion
+  if err := db.First(&conversion, id).Error; err != nil {
+    c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
+    return
+  }
+
+  var input UpdateConversionInput
+  if err := c.ShouldBindJSON(&input); err != nil {
+    c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+    return
+  }
+
+  if input.Name != "" {
+    conversion.Name = input.Name
+  }
+  if input.Value != nil {
+    conversion.Value = *input.Value
+  }
+
+  if err := db.Save(&conversion).Error; err != nil {
+    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update conversion"})
+    return
+  }
+
+  c.JSON(http.StatusOK, gin.H{"data": conversion})
 }
 
 func DeleteConversion(c *gin.Context) {
