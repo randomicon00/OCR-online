@@ -85,9 +85,21 @@ func AddConversion(c *gin.Context) {
 	})
 }
 
+// GetAllConversionErrors gets all conversion errors from the database
 func GetAllConversionErrors(c *gin.Context) {
-  log.Println("GetAllConversionErrors Handlers called")
-  c.JSON(http.statusOK, gin.H{"result": "add conversion!"})
+	log.Println("GetAllConversionErrors handler called")
+
+	var conversions []Conversion
+	if err := db.Where("successful = ?", false).Find(&conversions).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to retrieve conversion errors from database",
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"data": conversions,
+	})
 }
 
 func AddConversionError(c *gin.Context) {
