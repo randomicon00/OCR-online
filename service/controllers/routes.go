@@ -61,9 +61,28 @@ func GetConversion(c *gin.Context) {
 	})
 }
 
+// AddConversion adds a conversion to the database
 func AddConversion(c *gin.Context) {
-  log.Println("AddConversion Handlers called")
-  c.JSON(http.statusOK, gin.H{"result": "add conversion!"})
+	log.Println("AddConversion handler called")
+
+	var conversion Conversion
+	if err := c.ShouldBindJSON(&conversion); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": "Failed to parse request body",
+		})
+		return
+	}
+
+	if err := db.Create(&conversion).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to add conversion to database",
+		})
+		return
+	}
+
+	c.JSON(http.StatusCreated, gin.H{
+		"result": "Conversion added",
+	})
 }
 
 func GetAllConversionErrors(c *gin.Context) {
