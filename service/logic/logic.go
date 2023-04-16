@@ -4,14 +4,14 @@ import (
   "log"
   "net/http"
 
-  "github.com/example/db"
+  "example/models"
 )
 
-func GetAll() ([]db.Entry, int) {
+func GetAll() ([]models.Entry, int) {
   log.Println("GetAll request")
 
-  var entries []db.Entry
-  result := db.GetDB().Find(&entries)
+  var entries []models.Entry
+  result := models.GetDB().Find(&entries)
   if result.Error != nil {
     return nil, http.StatusInternalServerError
   }

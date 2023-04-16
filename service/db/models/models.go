@@ -12,7 +12,7 @@ type Entry struct {
   gorm.Model
   Name       string    `json:"name"`
   Uri        string    `json:"uri"`
-  Status     string 
+        Status     string 
 }
 
 // Conversion represents the model for a conversion
