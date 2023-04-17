@@ -1,4 +1,4 @@
-package lib 
+package lib
 
 import (
 	"io/ioutil"
@@ -9,7 +9,6 @@ import (
 
 // PerformOCR performs OCR on an image file attached to a multipart form request.
 func PerformOCR(req *http.Request) (string, error) {
-	
 	// Get image file from request body
 	file, _, err := req.FormFile("image")
 	if err != nil {
