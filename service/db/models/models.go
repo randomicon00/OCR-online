@@ -31,3 +31,6 @@ type Config struct {
   tls        bool
 }
 
+type ConversionError struct {
+	Message string
+}

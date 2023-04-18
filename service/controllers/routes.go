@@ -124,10 +124,10 @@ func AddConversionError(c *gin.Context) {
 
 func EditConversion(c *gin.Context) {
 	log.Println("EditConversion Handlers called")
-
+    db := models.DB;
 	id := c.Param("id")
 
-	var conversion Conversion
+	var conversion models.Conversion
 	if err := db.First(&conversion, id).Error; err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
 		return

@@ -4,15 +4,14 @@ import (
   "log"
   "net/http"
 
-  "example/models"
-
+	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
 func GetAll() ([]models.Entry, int) {
   log.Println("GetAll request")
-
+  db := models.DB
   var entries []models.Entry
-  result := models.GetDB().Find(&entries)
+  result := db.Find(&entries)
   if result.Error != nil {
     return nil, http.StatusInternalServerError
   }
