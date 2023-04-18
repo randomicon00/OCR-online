@@ -23,7 +23,7 @@ func ConnectDatabase() {
   psqlInfo := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s" +
   "sslmode=%s TimeZone=Asia/Pacific",
   host, user, password, dbname, port, sslmode)
-  db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+  db, err := gorm.Open(postgres.Open(psqlInfo), &gorm.Config{})
 
 	if err != nil {
 		panic("Error: Failed to connect to db")
@@ -31,6 +31,6 @@ func ConnectDatabase() {
 
 	db.AutoMigrate(&Entry{})
 
-	DB = database
+	DB = db
 }
 
