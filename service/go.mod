@@ -1,7 +1,5 @@
 module github.com/randomicon00/OCR-Webservice-frontend/service
 
-replace github.com/randomicon00/OCR-Webservice-frontend/service => ./example 
-
 go 1.19
 
 require (

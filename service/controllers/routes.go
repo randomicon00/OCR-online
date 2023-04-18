@@ -3,17 +3,29 @@ package controllers
 import (
 	"log"
 	"net/http"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
+	"github.com/randomicon00/OCR-Webservice-frontend/service/lib"
 	"gorm.io/gorm"
 )
+
+func PerformOCR(c *gin.Context) {
+	text, err := lib.PerformOCR(c.Request)
+
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "failed to perform OCR"})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{"text": text})
+
+}
 
 // GetAllConversions gets all conversions from the database
 func GetAllConversions(c *gin.Context) {
 	log.Println("GetAllConversions handler called")
-
-	var conversions []Conversion
+	db := models.DB
+	var conversions []models.Conversion
 	if err := db.Find(&conversions).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": "Failed to retrieve conversions from database",
@@ -93,93 +105,93 @@ func GetAllConversionErrors(c *gin.Context) {
 }
 
 func AddConversionError(c *gin.Context) {
-  log.Println("AddConversionError Handlers called")
-  
-  var conversionError ConversionError
-  if err := c.ShouldBindJSON(&conversionError); err != nil {
-    c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-    return
-  }
+	log.Println("AddConversionError Handlers called")
 
-  // Use GORM to create a new conversion error
-  if err := db.Create(&conversionError).Error; err != nil {
-    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create conversion error"})
-    return
-  }
+	var conversionError ConversionError
+	if err := c.ShouldBindJSON(&conversionError); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
 
-  c.JSON(http.StatusCreated, gin.H{"data": conversionError})
+	// Use GORM to create a new conversion error
+	if err := db.Create(&conversionError).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create conversion error"})
+		return
+	}
+
+	c.JSON(http.StatusCreated, gin.H{"data": conversionError})
 }
 
 func EditConversion(c *gin.Context) {
-  log.Println("EditConversion Handlers called")
+	log.Println("EditConversion Handlers called")
 
-  id := c.Param("id")
+	id := c.Param("id")
 
-  var conversion Conversion
-  if err := db.First(&conversion, id).Error; err != nil {
-    c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
-    return
-  }
+	var conversion Conversion
+	if err := db.First(&conversion, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
+		return
+	}
 
-  var input UpdateConversionInput
-  if err := c.ShouldBindJSON(&input); err != nil {
-    c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-    return
-  }
+	var input UpdateConversionInput
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
 
-  if input.Name != "" {
-    conversion.Name = input.Name
-  }
-  if input.Value != nil {
-    conversion.Value = *input.Value
-  }
+	if input.Name != "" {
+		conversion.Name = input.Name
+	}
+	if input.Value != nil {
+		conversion.Value = *input.Value
+	}
 
-  if err := db.Save(&conversion).Error; err != nil {
-    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update conversion"})
-    return
-  }
+	if err := db.Save(&conversion).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update conversion"})
+		return
+	}
 
-  c.JSON(http.StatusOK, gin.H{"data": conversion})
+	c.JSON(http.StatusOK, gin.H{"data": conversion})
 }
 
 func DeleteConversion(c *gin.Context) {
-  log.Println("DeleteConversions Handlers called")
+	log.Println("DeleteConversions Handlers called")
+    db := models.DB;
+	id := c.Param("id")
 
-  id := c.Param("id")
+	var conversion models.Conversion
+	if err := db.First(&conversion, id).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
+		return
+	}
 
-  var conversion Conversion
-  if err := db.First(&conversion, id).Error; err != nil {
-    c.JSON(http.StatusNotFound, gin.H{"error": "Conversion not found"})
-    return
-  }
+	if err := db.Delete(&conversion).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete conversion"})
+		return
+	}
 
-  if err := db.Delete(&conversion).Error; err != nil {
-    c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete conversion"})
-    return
-  }
-
-  c.JSON(http.StatusOK, gin.H{"data": true})
+	c.JSON(http.StatusOK, gin.H{"data": true})
 }
 
 func GetNotFound(c *gin.Context) {
-  // Log the request path that triggered the 404 error
-  log.Printf("404 Error: %s\n", c.Request.URL.Path)
+	// Log the request path that triggered the 404 error
+	log.Printf("404 Error: %s\n", c.Request.URL.Path)
 
-  // Set the response status code to 404 and return an error message as JSON
-  c.JSON(http.StatusNotFound, gin.H{
-    "error": "Sorry, the requested resource was not found on this server.",
-  })
+	// Set the response status code to 404 and return an error message as JSON
+	c.JSON(http.StatusNotFound, gin.H{
+		"error": "Sorry, the requested resource was not found on this server.",
+	})
 }
 
 func GetStats(c *gin.Context) {
-    log.Println("GetStats request")
-    stats, err := logic.GetConversionStats()
-    if err != nil {
-        log.Println("Error getting conversion statistics:", err)
-        c.JSON(http.StatusInternalServerError, gin.H{
-            "error": "Failed to get conversion statistics",
-        })
-        return
-    }
-    c.JSON(http.StatusOK, stats)
-    }
+	log.Println("GetStats request")
+	stats, err := logic.GetConversionStats()
+	if err != nil {
+		log.Println("Error getting conversion statistics:", err)
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": "Failed to get conversion statistics",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, stats)
+}

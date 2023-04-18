@@ -22,7 +22,7 @@ func ConnectDatabase() {
 
   psqlInfo := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s" +
   "sslmode=%s TimeZone=Asia/Pacific",
-  host, user, password, dbname, port sslmode)
+  host, user, password, dbname, port, sslmode)
   db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if err != nil {
