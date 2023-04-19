@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 	"github.com/randomicon00/OCR-Webservice-frontend/service/lib"
+	"github.com/randomicon00/OCR-Webservice-frontend/service/logic"	
 	"gorm.io/gorm"
 )
 
@@ -66,7 +67,7 @@ func GetConversion(c *gin.Context) {
 // AddConversion adds a conversion to the database
 func AddConversion(c *gin.Context) {
 	log.Println("AddConversion handler called")
-
+	db := models.DB
 	var conversion Conversion
 	if err := c.ShouldBindJSON(&conversion); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -90,7 +91,7 @@ func AddConversion(c *gin.Context) {
 // GetAllConversionErrors gets all conversion errors from the database
 func GetAllConversionErrors(c *gin.Context) {
 	log.Println("GetAllConversionErrors handler called")
-
+	db := models.DB
 	var conversions []Conversion
 	if err := db.Where("successful = ?", false).Find(&conversions).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
@@ -106,7 +107,7 @@ func GetAllConversionErrors(c *gin.Context) {
 
 func AddConversionError(c *gin.Context) {
 	log.Println("AddConversionError Handlers called")
-
+	db := models.DB
 	var conversionError ConversionError
 	if err := c.ShouldBindJSON(&conversionError); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
