@@ -186,7 +186,7 @@ func GetNotFound(c *gin.Context) {
 
 func GetStats(c *gin.Context) {
 	log.Println("GetStats request")
-	stats, err := logic.GetConversionStats()
+	stats, err := logic.GetStats()
 	if err != nil {
 		log.Println("Error getting conversion statistics:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{
