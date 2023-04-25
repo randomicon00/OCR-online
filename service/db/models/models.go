@@ -3,16 +3,16 @@ package models
 import "gorm.io/gorm"
 
 type User struct {
-  gorm.Model
-  Username    string `json:"username"` 
-  Password    string `json:"password"`
+	gorm.Model
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 type Entry struct {
-  gorm.Model
-  Name       string    `json:"name"`
-  Uri        string    `json:"uri"`
-        Status     string 
+	gorm.Model
+	Name   string `json:"name"`
+	Uri    string `json:"uri"`
+	Status string
 }
 
 // Conversion represents the model for a conversion
@@ -26,9 +26,9 @@ type Conversion struct {
 }
 
 type Config struct {
-  Address    string
-  Port       string
-  tls        bool
+	Address string
+	Port    string
+	tls     bool
 }
 
 type ConversionError struct {
