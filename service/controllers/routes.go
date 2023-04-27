@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 	"github.com/randomicon00/OCR-Webservice-frontend/service/lib"
-	"github.com/randomicon00/OCR-Webservice-frontend/service/logic"	
+	"github.com/randomicon00/OCR-Webservice-frontend/service/logic"
 	"gorm.io/gorm"
 )
 
@@ -125,7 +125,7 @@ func AddConversionError(c *gin.Context) {
 
 func EditConversion(c *gin.Context) {
 	log.Println("EditConversion Handlers called")
-    db := models.DB;
+	db := models.DB
 	id := c.Param("id")
 
 	var conversion models.Conversion
@@ -157,7 +157,7 @@ func EditConversion(c *gin.Context) {
 
 func DeleteConversion(c *gin.Context) {
 	log.Println("DeleteConversions Handlers called")
-    db := models.DB;
+	db := models.DB
 	id := c.Param("id")
 
 	var conversion models.Conversion
