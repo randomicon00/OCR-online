@@ -21,7 +21,7 @@ func GetAll() ([]models.Entry, error) {
 func GetAllByDate(date string) (interface{}, error) {
 	log.Println("GetAllByDate request")
 
-	// implementation here
+	// TODO implementation here
 
 	return nil, nil
 }
@@ -29,7 +29,7 @@ func GetAllByDate(date string) (interface{}, error) {
 func CreateOne(item interface{}) (interface{}, error) {
 	log.Println("CreateOne request")
 
-	// implementation here
+	// TODO implementation here
 
 	return nil, nil
 }
@@ -37,7 +37,7 @@ func CreateOne(item interface{}) (interface{}, error) {
 func EditOne(id string) (interface{}, error) {
 	log.Println("EditOne request")
 
-	// implementation here
+	// TODO implementation here
 
 	return nil, nil
 }
@@ -45,7 +45,7 @@ func EditOne(id string) (interface{}, error) {
 func DeleteOne(id string) (interface{}, error) {
 	log.Println("DeleteOne request")
 
-	// implementation here
+	// TODO implementation here
 
 	return nil, nil
 }
@@ -53,7 +53,7 @@ func DeleteOne(id string) (interface{}, error) {
 func GetStats() (interface{}, error) {
 	log.Println("GetStats request")
 
-	// implementation here
+	// TODO implementation here
 
 	return nil, nil
 }
