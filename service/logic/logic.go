@@ -2,7 +2,9 @@ package logic
 
 import (
 	"log"
+  "net/http"
 
+  "github.com/gin-gonic/gin"
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
@@ -18,13 +20,27 @@ func GetAll() ([]models.Entry, error) {
 	return entries, nil
 }
 
-func GetAllByDate(date string) (interface{}, error) {
-	log.Println("GetAllByDate request")
+func GetAllByDate(c *gin.Context) {
+    date := c.Param("date")
 
-	// TODO implementation here
+    // Assuming you have some kind of database connection or data store
+    // where you can fetch the data by date
+    //data, err := fetchDataByDate(date)
+    data, err :=  "", nil
 
-	return nil, nil
+    if err != nil {
+        c.JSON(http.StatusInternalServerError, gin.H{
+            "error": "Failed to fetch data by date",
+        })
+        return
+    }
+
+    c.JSON(http.StatusOK, gin.H{
+        "data": data,
+    })
 }
+
+
 
 func CreateOne(item interface{}) (interface{}, error) {
 	log.Println("CreateOne request")
