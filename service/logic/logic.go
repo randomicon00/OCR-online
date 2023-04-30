@@ -25,7 +25,7 @@ func GetAllByDate(c *gin.Context) {
 
 	// Assuming you have some kind of database connection or data store
 	// where you can fetch the data by date
-	//data, err := fetchDataByDate(date)
+	// data, err := fetchDataByDate(date)
 	data, err := "", nil
 
 	if err != nil {
