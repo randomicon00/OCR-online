@@ -40,34 +40,34 @@ func GetAllByDate(c *gin.Context) {
 	})
 }
 
-func CreateOne(item interface{}) (interface{}, error) {
+func CreateOne(item interface{}) {
 	log.Println("CreateOne request")
 
 	// TODO implementation here
 
-	return nil, nil
+	return
 }
 
-func EditOne(id string) (interface{}, error) {
+func EditOne(id string) {
 	log.Println("EditOne request")
 
 	// TODO implementation here
 
-	return nil, nil
+	return
 }
 
-func DeleteOne(id string) (interface{}, error) {
+func DeleteOne(id string) {
 	log.Println("DeleteOne request")
 
 	// TODO implementation here
 
-	return nil, nil
+	return 
 }
 
-func GetStats() (interface{}, error) {
+func GetStats() {
 	log.Println("GetStats request")
 
 	// TODO implementation here
 
-	return nil, nil
+	return
 }
