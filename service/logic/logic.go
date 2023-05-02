@@ -43,7 +43,7 @@ func GetAllByDate(c *gin.Context) {
 func CreateOne(item interface{}) {
 	log.Println("CreateOne request")
 
-	// TODO implementation here
+	// TODO implment the handler
 
 	return
 }
@@ -51,7 +51,7 @@ func CreateOne(item interface{}) {
 func EditOne(id string) {
 	log.Println("EditOne request")
 
-	// TODO implementation here
+	// TODO implment the handler
 
 	return
 }
@@ -59,7 +59,7 @@ func EditOne(id string) {
 func DeleteOne(id string) {
 	log.Println("DeleteOne request")
 
-	// TODO implementation here
+	// TODO implment the handler
 
 	return 
 }
@@ -67,7 +67,7 @@ func DeleteOne(id string) {
 func GetStats() {
 	log.Println("GetStats request")
 
-	// TODO implementation here
+	// TODO implment the handler
 
 	return
 }
