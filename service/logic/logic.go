@@ -9,7 +9,7 @@ import (
 )
 
 func GetAll() ([]models.Entry, error) {
-	log.Println("GetAll request")
+	log.Println("GetAll handler")
 	db := models.DB
 	var entries []models.Entry
 	result := db.Find(&entries)
@@ -20,28 +20,13 @@ func GetAll() ([]models.Entry, error) {
 	return entries, nil
 }
 
-func GetAllByDate(c *gin.Context) {
-	date := c.Param("date")
-
-	// Assuming you have some kind of database connection or data store
-	// where you can fetch the data by date
-	// data, err := fetchDataByDate(date)
-	data, err := "", nil
-
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"error": "Failed to fetch data by date",
-		})
-		return
-	}
-
-	c.JSON(http.StatusOK, gin.H{
-		"data": data,
-	})
+func GetAllByDate(date string) {
+  log.Println("GetAllByDate handler")
+  // TODO implement this handler
 }
 
 func CreateOne(item interface{}) {
-	log.Println("CreateOne request")
+	log.Println("CreateOne handler")
 
 	// TODO implment the handler
 
@@ -49,7 +34,7 @@ func CreateOne(item interface{}) {
 }
 
 func EditOne(id string) {
-	log.Println("EditOne request")
+	log.Println("EditOne handler")
 
 	// TODO implment the handler
 
@@ -57,15 +42,15 @@ func EditOne(id string) {
 }
 
 func DeleteOne(id string) {
-	log.Println("DeleteOne request")
+	log.Println("DeleteOne handler")
 
 	// TODO implment the handler
 
 	return 
 }
 
-func GetStats() {
-	log.Println("GetStats request")
+
+	log.Println("GetStats handler")
 
 	// TODO implment the handler
 
