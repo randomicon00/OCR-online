@@ -10,8 +10,8 @@ import (
 )
 
 func SetupRouter() *gin.Engine {
-   r := gin.Default()
-   return r
+	r := gin.Default()
+	return r
 }
 
 func main() {
@@ -28,15 +28,14 @@ func main() {
 		})
 	})
 
-  // TODO Move callback to controller
+	// TODO Move callback to controller
 	r.GET("/heatlh", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-      "message": "OCR service status: Online",
+			"message": "OCR service status: Online",
 		})
 	})
-  
 
-  // TODO Move callback to controller
+	// TODO Move callback to controller
 	r.GET("/result", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "my ocr text!",
@@ -44,5 +43,5 @@ func main() {
 	})
 
 	log.Println("Starting OCR web service on port 8080...")
-  r.Run(":8080")
+	r.Run(":8080")
 }
