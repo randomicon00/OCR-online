@@ -8,7 +8,7 @@ import (
 	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
-func GetAll() ([]models.Entry, error) {
+func GetAll() ([]models.Conversion, error) {
 	log.Println("GetAll handler")
 	db := models.DB
 	var entries []models.Entry
