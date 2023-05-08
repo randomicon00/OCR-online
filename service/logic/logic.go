@@ -23,6 +23,7 @@ func GetAll() ([]models.Conversion, error) {
 func GetAllByDate(date string) {
 	log.Println("GetAllByDate handler")
 	// TODO implement this handler
+  return
 }
 
 func CreateOne(item interface{}) {
