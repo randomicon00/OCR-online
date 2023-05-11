@@ -8,13 +8,6 @@ type User struct {
 	Password string `json:"password"`
 }
 
-type Entry struct {
-	gorm.Model
-	Name   string `json:"name"`
-	Uri    string `json:"uri"`
-	Status string
-}
-
 // Conversion represents the model for a conversion
 type Conversion struct {
 	gorm.Model
