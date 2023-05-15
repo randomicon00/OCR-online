@@ -10,7 +10,8 @@ import (
 
 func GetAll() ([]models.Conversion, error) {
 	log.Println("GetAll handler")
-	db := models.DB
+
+  db := models.DB
 	var entries []models.Entry
 	result := db.Find(&entries)
 	if result.Error != nil {
