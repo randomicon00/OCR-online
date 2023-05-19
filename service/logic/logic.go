@@ -30,7 +30,7 @@ func GetAllByDate(date string) {
 func CreateOne(item interface{}) {
 	log.Println("CreateOne handler")
 
-	// TODO implment the handler
+	// TODO implement the handler
 
 	return
 }
@@ -38,7 +38,7 @@ func CreateOne(item interface{}) {
 func EditOne(id string) {
 	log.Println("EditOne handler")
 
-	// TODO implment the handler
+	// TODO implement the handler
 
 	return
 }
@@ -46,7 +46,7 @@ func EditOne(id string) {
 func DeleteOne(id string) {
 	log.Println("DeleteOne handler")
 
-	// TODO implment the handler
+	// TODO implement the handler
 
 	return
 }
