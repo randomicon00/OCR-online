@@ -25,5 +25,5 @@ type Config struct {
 }
 
 type ConversionError struct {
-	Message string
+	Text string
 }
