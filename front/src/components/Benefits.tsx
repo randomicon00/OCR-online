@@ -74,7 +74,7 @@ const Benefits = () => {
             Benefits
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Why choose our service?
+            Why Choose Our Service?
           </p>
         </div>
 
