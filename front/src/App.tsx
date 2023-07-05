@@ -10,7 +10,7 @@ const App = () => {
   const ref = useRef();
 
   const toggle = () => {
-    setShow((show) => !show);
+    setShow(show => !show);
   };
 
   useEffect(() => {
