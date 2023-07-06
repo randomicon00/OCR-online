@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ name }) => {
+const Button = ({ name, text }) => {
   return (
     <div>
       <button name={name} style={{ backgroundColor: "green" }}>
-        Sample Button
+        {text} 
       </button>
     </div>
   );
