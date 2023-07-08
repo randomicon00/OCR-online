@@ -5,7 +5,8 @@ import "gorm.io/gorm"
 type User struct {
 	gorm.Model
 	Username string `json:"username"`
-	Password string `json:"password"`
+  Email string `json:"email"`
+  Password string `json:"password"`
 }
 
 // Conversion represents the model for a conversion
@@ -15,13 +16,13 @@ type Conversion struct {
 	From       string
 	To         string
 	Result     float64
-	Successful bool
+	Success    bool
 }
 
 type Config struct {
 	Address string
 	Port    string
-	tls     bool
+	TLS     bool
 }
 
 type ConversionError struct {
