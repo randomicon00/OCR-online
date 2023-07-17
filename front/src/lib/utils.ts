@@ -15,7 +15,6 @@ const formatSize = (size) => {
 
 const formatDate = (date, format) => moment(date).format(format);
 
-
 const countCharacters = (str) => {
   str = str.trim();
 
