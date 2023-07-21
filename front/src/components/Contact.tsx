@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // logic to handle form submission
+    // TODO Write the logic here
   };
 
   return (
