@@ -40,3 +40,4 @@ describe('Contact Form', () => {
     expect(handleSubmit).toHaveBeenCalledTimes(1);
   });
 });
+
