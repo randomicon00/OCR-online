@@ -23,7 +23,7 @@ const countCharacters = (str) => {
 
 const countWords = (str) => {
   str = str.trim();
-  var words = str.split(/\s+/);
+  const words = str.split(/\s+/);
 
   return words.length;
 }
