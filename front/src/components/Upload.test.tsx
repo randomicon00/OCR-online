@@ -16,6 +16,7 @@ test("fires onChange event when file is selected", async () => {
   render(<Upload name="test-file" onChange={handleChange} />);
   const file = new File(["(⌐□_□)"], "test.png", { type: "image/png" });
   const inputElement = screen.getByLabelText(/upload/i);
+  
   await userEvent.upload(inputElement, file);
   
   expect(handleChange).toHaveBeenCalledTimes(1);
