@@ -6,6 +6,7 @@ test("renders input element with specified name", () => {
   const name = "test-file";
   render(<Upload name={name} />);
   const inputElement = screen.getByLabelText(/upload/i);
+  
   expect(inputElement).toBeInTheDocument();
   expect(inputElement).toHaveAttribute("name", name);
 });
@@ -16,6 +17,7 @@ test("fires onChange event when file is selected", async () => {
   const file = new File(["(⌐□_□)"], "test.png", { type: "image/png" });
   const inputElement = screen.getByLabelText(/upload/i);
   await userEvent.upload(inputElement, file);
+  
   expect(handleChange).toHaveBeenCalledTimes(1);
   expect(handleChange).toHaveBeenCalledWith(file);
 });
