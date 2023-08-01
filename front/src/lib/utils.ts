@@ -3,13 +3,13 @@ import moment from "moment.js";
 // Add jsdoc to all functions in this file
 const formatSize = (size) => {
   if (size >= 1073741824) {
-    return (size / 1073741824).toFixed(2) + " GB";
+    return (size / 1073741824).toFixed(2) + " Gb";
   } else if (size >= 1048576) {
-    return (size / 1048576).toFixed(2) + " MB";
+    return (size / 1048576).toFixed(2) + " Mb";
   } else if (size >= 1024) {
-    return (size / 1024).toFixed(2) + " KB";
+    return (size / 1024).toFixed(2) + " Kb";
   } else {
-    return size + " B";
+    return size + " b";
   }
 };
 
