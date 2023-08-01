@@ -1,5 +1,6 @@
 package controllers
 
+
 import (
 	"log"
 	"net/http"
@@ -24,7 +25,8 @@ func PerformOCR(c *gin.Context) {
 
 // GetAllConversions gets all conversions from the database
 func GetAllConversions(c *gin.Context) {
-	log.Println("GetAllConversions handler called")
+	log.Println("GetAllConversions handler call")
+
 	db := models.DB
 	var conversions []models.Conversion
 	if err := db.Find(&conversions).Error; err != nil {
@@ -41,7 +43,7 @@ func GetAllConversions(c *gin.Context) {
 
 // GetConversion gets a single conversion by ID from the database
 func GetConversion(c *gin.Context) {
-	log.Println("GetConversion handler called")
+	log.Println("GetConversion handler call")
 
 	id := c.Param("id")
 	var conversion Conversion
