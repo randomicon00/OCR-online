@@ -5,9 +5,8 @@ const Intro = () => {
     <div>
       <h1>OCR Image to Text Converter Online</h1>
       <p>
-        Picture to text converter allows you to extract text from image or
-        convert PDF to Doc, Excel or Text formats using Optical Character
-        Recognition software online
+      Image to Text converter enables you to extract text from images or 
+        convert PDFs to Doc, Excel, or Text formats using online Optical Character Recognition (OCR) software.
       </p>
     </div>
   );
