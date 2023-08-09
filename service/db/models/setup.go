@@ -9,9 +9,9 @@ import (
 
 const (
 	host     = "localhost"
-	user     = "gorm"
-	password = "gorm"
-	dbname   = "gorm"
+	user     = "user"
+	password = "password"
+	dbname   = "database"
 	port     = 9932
 	sslmode  = "disabled"
 )
