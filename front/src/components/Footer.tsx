@@ -4,10 +4,10 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-menu">
           <ul>
-           <li>Menu item 1 (example)</li>
-           <li>Menu item 2 (example)</li>
-           <li>Menu item 3 (example)</li>
-           <li>Menu item 4 (example)</li>
+           <li>Home</li>
+           <li>Convert</li>
+           <li>About</li>
+           <li>Contact</li>
           </ul>
         </div>
       </div>
