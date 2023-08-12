@@ -25,6 +25,7 @@ const App = () => {
       el.addEventListener("click", handleClick);
     }
 
+    // Cleanup at the end of the lifecycle
     return () => {
       el.removeEventListener("click", handleClick);
     };
