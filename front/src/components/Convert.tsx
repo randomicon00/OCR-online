@@ -8,7 +8,7 @@ const Convert = () => {
     if (status === "progress") {
       const timeoutId = setTimeout(() => {
         setStatus("complete");
-      }, 5000);
+      }, 1000);
 
       return () => clearTimeout(timeoutId);
     }
