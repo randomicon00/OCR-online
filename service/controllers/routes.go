@@ -20,7 +20,6 @@ func PerformOCR(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"text": text})
-
 }
 
 // GetAllConversions gets all conversions from the database
