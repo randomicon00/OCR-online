@@ -78,7 +78,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-8">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {benefits.map(({ title, text, icon }) => (
               <Benefit title={title} text={text} icon={icon} />
