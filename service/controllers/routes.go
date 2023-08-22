@@ -197,3 +197,9 @@ func GetStats(c *gin.Context) {
   }
   c.JSON(http.StatusOK, stats)
 }
+
+func GetData(c *gin.Context) {
+  log.Println("GetData request")
+
+  // TODO Return the data to be displayed by charts
+}
