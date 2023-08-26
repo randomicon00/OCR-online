@@ -203,3 +203,9 @@ func GetData(c *gin.Context) {
 
   // TODO Return the data to be displayed by charts
 }
+
+func AddData(c *gin.Context) {
+  log.Println("Data request")
+
+  // TODO Insert  the data to be displayed by charts
+}
