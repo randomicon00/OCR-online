@@ -8,7 +8,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO Write the logic here
+    // TODO Store in DB + Send email logic here
+    // TODO Send to api for processing
   };
 
   return (
