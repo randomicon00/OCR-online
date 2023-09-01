@@ -7,6 +7,7 @@ import {
   PhotographIcon,
 } from "@heroicons/react/solid";
 
+// TODO use an array for all these texts. Change this. 
 const use_online = `Use it online without installing any software`;
 const img_to_txt = `Convert images to editable text`;
 const pdf_to_doc = `Convert PDF files to editable Word documents`;
