@@ -7,43 +7,35 @@ import {
   PhotographIcon,
 } from "@heroicons/react/solid";
 
-// TODO use an array for all these texts. Change this. 
-const use_online = `Use it online without installing any software`;
-const img_to_txt = `Convert images to editable text`;
-const pdf_to_doc = `Convert PDF files to editable Word documents`;
-const iOS_Android = `Works on both iOS and Android devices`;
-const secure_conversion = `Secure conversion with encryption and automatic deletion of uploaded files`;
-const free_tool = `Completely free to use without any hidden fees or limits`;
-
 const benefits = [
   {
     title: "Use online",
-    text: use_online,
+    text: "Use it online without installing any software",
     icon: <GlobeAltIcon className="h-6 w-6" />,
   },
   {
     title: "Image to text",
-    text: img_to_txt,
+    text: "Convert images to editable text",
     icon: <PhotographIcon className="h-6 w-6" />,
   },
   {
     title: "Convert PDF to DOC",
-    text: pdf_to_doc,
+    text: "Convert PDF files to editable Word documents",
     icon: <DocumentTextIcon className="h-6 w-6" />,
   },
   {
     title: "Works with iOS and Android",
-    text: iOS_Android,
+    text: "Works on both iOS and Android devices",
     icon: <ChatAlt2Icon className="h-6 w-6" />,
   },
   {
     title: "Secure conversion",
-    text: secure_conversion,
+    text: "Secure conversion with encryption and automatic deletion of uploaded files",
     icon: <LockClosedIcon className="h-6 w-6" />,
   },
   {
     title: "Free tool",
-    text: free_tool,
+    text: "Completely free to use without any hidden fees or limits",
     icon: <PhotographIcon className="h-6 w-6" />,
   },
 ];
