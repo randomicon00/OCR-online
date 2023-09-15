@@ -67,7 +67,7 @@ const Benefits = () => {
             Benefits
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Why Use Online OCR?
+            Why Use OCR Online?
           </p>
         </div>
 
