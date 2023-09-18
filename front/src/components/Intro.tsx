@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div>
+    <div id="intro">
       <h1>OCR Image to Text Converter Online</h1>
       <p>
       Image to Text converter enables you to extract text from images or 
