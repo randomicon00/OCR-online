@@ -9,3 +9,4 @@ it("renders OCR application's title text", () => {
   expect(titleElement).toBeInTheDocument();
 });
 
+// TODO More tests for the app are needed!
