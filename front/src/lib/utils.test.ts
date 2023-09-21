@@ -95,7 +95,7 @@ describe("countWords", () => {
 
   // Test punctuation
   it("returns the correct count for a string with punctuation", () => {
-    expect(countWords("one, two, three!")).toBe(3);
+    expect(countWords("one, two, three, four!")).toBe(4);
   });
 
   // Test multi-language
