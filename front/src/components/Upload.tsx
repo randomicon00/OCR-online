@@ -11,8 +11,10 @@ const Upload = ({ name, accept, onChange }: UploadProps) => {
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
-    setFileName(file ? file.name : "");
-    onChange(file);
+    if (file) {
+      setFileName(file.name);
+      onChange(file);
+    }
   };
 
   return (
