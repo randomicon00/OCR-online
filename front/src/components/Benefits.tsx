@@ -42,7 +42,7 @@ const benefits = [
 
 type BenefitsProps = {
   title: string;
-  text: string;
+  text?: string;
   icon: JSX.Element;
 };
 
