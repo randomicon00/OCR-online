@@ -42,7 +42,7 @@ func GetAllConversions(c *gin.Context) {
 
 // GetConversion gets a single conversion by ID from the database
 func GetConversion(c *gin.Context) {
-  log.Println("GetConversion handler call")
+  log.Println("GetConversion handler called")
 
   id := c.Param("id")
   var conversion Conversion
