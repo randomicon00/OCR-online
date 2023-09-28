@@ -1,29 +1,29 @@
 package logic
 
 import (
-	"log"
-	"net/http"
+  "log"
+  "net/http"
 
-	"github.com/gin-gonic/gin"
-	"github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
+  "github.com/gin-gonic/gin"
+  "github.com/randomicon00/OCR-Webservice-frontend/service/db/models"
 )
 
 func GetAll() ([]models.Conversion, error) {
-	log.Println("GetAll handler")
+  log.Println("GetAll handler")
 
   db := models.DB
-	var entries []models.Entry
-	result := db.Find(&entries)
-	if result.Error != nil {
-		return nil, result.Error
-	}
+  var entries []models.Entry
+  result := db.Find(&entries)
+  if result.Error != nil {
+    return nil, result.Error
+  }
 
-	return entries, nil
+  return entries, nil
 }
 
 func GetAllByDate(date string) {
-	log.Println("GetAllByDate handler")
-	// TODO implement this handler
+  log.Println("GetAllByDate handler")
+  // TODO implement this handler
   return
 }
 
@@ -32,7 +32,7 @@ func CreateOne(item interface{}) {
 
   // TODO implement the handler
 
-	return
+  return
 }
 
 func EditOne(id string) {
