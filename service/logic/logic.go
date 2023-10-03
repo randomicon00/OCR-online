@@ -11,9 +11,10 @@ import (
 func GetAll() ([]models.Conversion, error) {
   log.Println("GetAll handler")
 
-  db := models.DB
   var entries []models.Entry
+  db := models.DB
   result := db.Find(&entries)
+  
   if result.Error != nil {
     return nil, result.Error
   }
