@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mt-4">
       <Nav />
       {children}
       <Footer />
