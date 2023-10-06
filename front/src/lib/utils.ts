@@ -15,17 +15,8 @@ const formatSize = (size) => {
 
 const formatDate = (date, format) => moment(date).format(format);
 
-const countCharacters = (str) => {
-  str = str.trim();
+const countCharacters = (str) => str.trim().length;
 
-  return str.length;
-}
-
-const countWords = (str) => {
-  str = str.trim();
-  const words = str.split(/\s+/);
-
-  return words.length;
-}
+const countWords = (str) => str.trim().split(/\s+/).length;
 
 export { formatSize, formatDate, countCharacters, countWords };
