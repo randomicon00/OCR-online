@@ -2,11 +2,12 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-it("renders OCR application's title text", () => {
+it("renders OCR application's intro text", () => {
   render(<App />);
-  const titleElement = screen.getByText(/image to text conversion/i);
+
+  // Get the h1 element that is the intro element
+  const introElement = screen.getByText(/online ocr image to text converter/i);
   
-  expect(titleElement).toBeInTheDocument();
+  expect(introElement).toBeInTheDocument();
 });
 
-// TODO More tests for the app are needed!
