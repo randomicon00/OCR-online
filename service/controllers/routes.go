@@ -12,7 +12,6 @@ import (
 )
 
 func PerformOCR(c *gin.Context) {
-  // TODO: Choose a better name for PerformOCR
   text, err := lib.PerformOCR(c.Request)
 
   if err != nil {
