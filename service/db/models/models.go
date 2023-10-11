@@ -21,7 +21,7 @@ type Conversion struct {
 
 type Config struct {
   Address string
-  Port    string
+  Port    int
   TLS     bool
 }
 
