@@ -4,7 +4,8 @@ import Header from './Header'; // Adjust the import according to your file struc
 import Nav from './Nav'; // Adjust the import according to your file structure
 import '@testing-library/jest-dom/extend-expect';
 
-// TODO: Add explanation for the following code.
+// Mock the component in order to decouple the test of
+// this single component. 
 jest.mock('./Nav', () => {
   return function DummyNav() {
     return <div data-testid="nav">Nav Component</div>;
