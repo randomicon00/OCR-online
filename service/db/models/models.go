@@ -25,6 +25,7 @@ type Config struct {
   TLS     bool
 }
 
+// Conversion error is for logging purposes
 type ConversionError struct {
   Text string
   Code int
