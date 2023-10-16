@@ -10,7 +10,7 @@ const Upload = ({ name, accept, onChange }: UploadProps) => {
   const [fileName, setFileName] = useState("");
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files ? event.target.files[0] : null;
+    const file = event.target.files?.[0];
     if (file) {
       setFileName(file.name);
       onChange(file);
