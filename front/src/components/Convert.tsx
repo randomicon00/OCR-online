@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 
+const STATUS = {
+  idle: 0,
+  progress: 1,
+  complete: 2,
+};
+
 const Convert = () => {
-  const [status, setStatus] = useState("idle");
+  const [status, setStatus] = useState(STATUS["idle"]);
 
   useEffect(() => {
     // Simulate a conversion that takes 5 seconds
-    if (status === "progress") {
+    if (status === STATUS[""]) {
       const timeoutId = setTimeout(() => {
         setStatus("complete");
       }, 1000);
@@ -15,20 +21,20 @@ const Convert = () => {
   }, [status]);
 
   const startConversion = () => {
-    setStatus("progress");
+    setStatus(STATUS["progress"]);
   };
 
   const renderContent = () => {
-    if (status === "idle") {
+    if (status === STATUS["idle"]) {
       return <button onClick={startConversion}>Convert</button>;
     }
 
-    if (status === "progress") {
+    if (status === STATUS["progress"]) {
 
       return <p>Text extraction from file is in progress...</p>;
     }
 
-    if (status === "complete") {
+    if (status === STATUS["complete"]) {
       return <p>Text extraction has been completed!</p>;
     }
   };
