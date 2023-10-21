@@ -9,7 +9,7 @@ const App = () => {
   const [show, setShow] = useState(false);
   const ref = useRef(null);
 
-  const toggle = () => {
+  const toggleVisibility = () => {
     setShow(show => !show);
   };
 
@@ -43,7 +43,7 @@ const App = () => {
           Upload File
         </div>
       </div>
-      <button onClick={toggle}>Toggle Visibility</button>
+      <button onClick={toggleVisibility}>Toggle Visibility</button>
     </div>
   );
 };
