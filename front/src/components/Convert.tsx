@@ -14,7 +14,7 @@ const Convert = () => {
     if (status === STATUS[""]) {
       const timeoutId = setTimeout(() => {
         setStatus("complete");
-      }, 1000);
+      }, 5000);
 
       return () => clearTimeout(timeoutId);
     }
