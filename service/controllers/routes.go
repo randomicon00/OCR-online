@@ -180,7 +180,7 @@ func GetNotFound(c *gin.Context) {
 
   // Set the response status code to 404 and return an error message as JSON
   c.JSON(http.StatusNotFound, gin.H{
-    "error": "Sorry, the requested resource was not found on this server.",
+    "error": "Sorry, the requested resource was not found on the server.",
   })
 }
 
