@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 const App = () => {
   const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
-  const ref = useRef(null);
+  const refEl = useRef(null);
 
   const toggleVisibility = () => {
     setShow(show => !show);
@@ -15,13 +15,13 @@ const App = () => {
 
   useEffect(() => {
     // Element to which we attach a listener
-    const el = ref.current;
+    const el = refEl.current;
 
     const handleClick = (e) => {
       console.log("Clicked!");
     };
 
-    if (ref.current) {
+    if (refEl.current) {
       el.addEventListener("click", handleClick);
     }
 
@@ -39,7 +39,7 @@ const App = () => {
         <Benefits />
       </Layout>
       <div>
-        <div id="listener" ref={ref}>
+        <div id="listener" ref={refEl}>
           Upload File
         </div>
       </div>
