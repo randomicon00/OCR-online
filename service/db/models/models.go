@@ -28,6 +28,6 @@ type Config struct {
 
 // Conversion error is for logging purposes
 type ConversionError struct {
-  Text string
+  Message string
   Code int
 }
