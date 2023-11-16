@@ -7,8 +7,6 @@ import (
   "github.com/otiai10/gosseract/v2"
 )
 
-func ConvertToImage() {}
-
 // PerformOCR performs OCR on an image file attached to a multipart form request.
 func PerformOCR(req *http.Request) (string, error) {
   // Get image file from request body
