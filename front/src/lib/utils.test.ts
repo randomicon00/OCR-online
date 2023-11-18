@@ -67,7 +67,7 @@ describe("countCharacters", () => {
 
   // Test multi-language
   it("returns the correct count for a multi-language string", () => {
-    expect(countCharacters("abcäöü")).toBe(6);
+    expect(countCharacters("abcäöüd")).toBe(7);
   });
 });
 
