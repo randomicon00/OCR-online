@@ -27,6 +27,7 @@ func GetAllConversions(c *gin.Context) {
 
   db := models.DB
   var conversions []models.Conversion
+  
   if err := db.Find(&conversions).Error; err != nil {
     c.JSON(http.StatusInternalServerError, gin.H{
       "error": "Failed to retrieve conversions from database",
