@@ -43,7 +43,7 @@ const App = () => {
           Upload File
         </div>
       </div>
-      <button onClick={toggleVisibility}>Toggle Visibility</button>
+      <button onClick={toggleVisibility}>Change Visibility</button>
     </div>
   );
 };
