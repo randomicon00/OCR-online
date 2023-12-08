@@ -25,28 +25,28 @@ func GetAll() ([]models.Conversion, error) {
 func GetAllByDate(date string) {
   log.Println("GetAllByDate handler")
 
-  // TODO implement this handler
+  // TODO implement the getallbydate handler
   return
 }
 
 func CreateOne(item interface{}) {
   log.Println("CreateOne handler")
 
-  // TODO implement the handler
+  // TODO implement the create one handler
   return
 }
 
 func EditOne(id string) {
   log.Println("EditOne handler")
 
-  // TODO implement the handler
+  // TODO implement the edit handler
   return
 }
 
 func DeleteOne(id string) {
   log.Println("DeleteOne handler")
 
-  // TODO implement the handler
+  // TODO implement the delete handler
   return
 }
 
