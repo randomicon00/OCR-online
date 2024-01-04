@@ -10,7 +10,6 @@ type User struct {
   Password string `json:"password"`
 }
 
-// Conversion represents the model for a conversion
 type Conversion struct {
   gorm.Model
   Amount     float64
@@ -26,7 +25,6 @@ type Config struct {
   TLS     bool
 }
 
-// Conversion error is for logging purposes
 type ConversionError struct {
   Message string
   Code int
