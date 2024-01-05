@@ -5,7 +5,6 @@ import Benefits from "./components/Benefits";
 import Layout from "./components/Layout";
 
 const App = () => {
-  const [state, setState] = useState(0);
   const [show, setShow] = useState(false);
   const refEl = useRef(null);
 
@@ -27,7 +26,7 @@ const App = () => {
 
     // Cleanup at the end of the lifecycle
     return () => {
-      el.removeEventListener("click", handleClick);
+      el.removeEventListener("click",1 handleClick);
     };
   }, []);
 
