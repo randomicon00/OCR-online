@@ -16,13 +16,11 @@ func PerformOCR(req *http.Request) (string, error) {
   }
   defer file.Close()
 
-  // Read image file bytes
   imgBytes, err := ioutil.ReadAll(file)
   if err != nil {
     return "", err
   }
 
-  // Perform OCR on the source image 
   client := gosseract.NewClient()
   defer client.Close()
   client.SetImageFromBytes(imgBytes)
