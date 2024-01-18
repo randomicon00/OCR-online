@@ -13,7 +13,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    // Element to which we attach a listener
     const el = refEl.current;
 
     const handleClick = (e) => {
