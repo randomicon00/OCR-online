@@ -201,13 +201,13 @@ func GetStats(c *gin.Context) {
 func GetData(c *gin.Context) {
   log.Println("GetData request")
 
-  // TODO Return the data to be displayed by charts
+  // TODO Return the data to be displayed in the charts
   return
 }
 
 func AddData(c *gin.Context) {
   log.Println("Data request")
 
-  // TODO Insert the data to be displayed by charts
+  // TODO Insert the data to be displayed in the charts
   return
 }
