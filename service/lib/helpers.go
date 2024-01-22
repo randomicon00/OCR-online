@@ -7,7 +7,6 @@ import (
   "github.com/otiai10/gosseract/v2"
 )
 
-// PerformOCR performs OCR on an image file attached to a multipart form request.
 func PerformOCR(req *http.Request) (string, error) {
   file, _, err := req.FormFile("image")
   if err != nil {
