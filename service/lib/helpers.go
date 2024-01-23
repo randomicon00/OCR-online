@@ -21,7 +21,9 @@ func PerformOCR(req *http.Request) (string, error) {
 
   client := gosseract.NewClient()
   defer client.Close()
+  
   client.SetImageFromBytes(imgBytes)
+  
   text, err := client.Text()
   if err != nil {
     return "", err
