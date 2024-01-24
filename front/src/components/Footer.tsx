@@ -11,7 +11,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p>&copy; 2023 Online OCR. All rights reserved.</p>
+      <p>&copy; 2024 Online OCR. All rights reserved.</p>
     </footer>
 
   );
