@@ -7,7 +7,6 @@ import (
   "github.com/otiai10/gosseract/v2"
 )
 
-// This is the core function that performs the conversion
 func PerformOCR(req *http.Request) (string, error) {
   file, _, err := req.FormFile("image")
   if err != nil {
