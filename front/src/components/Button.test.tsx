@@ -17,7 +17,7 @@ describe('Button Component', () => {
   });
 
   it('has correct name attribute', () => {
-    const { getByRole } = render(<Button name="testButton" text="Test Button"/>);
+    const { getByRole } = render(<Button name="testButton" text="Test Button" backgroundColor="green"/>);
 
     const button = getByRole('button');
     expect(button.getAttribute('name')).toBe('testButton');
