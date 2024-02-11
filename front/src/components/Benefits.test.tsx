@@ -4,6 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import Benefits from "./Benefits";
 
 describe("Benefits component", () => {
+  // Benefits wihtout icons
   it("renders all benefits with their titles and texts", () => {
     render(<Benefits />);
     expect(screen.getByText("Use online")).toBeInTheDocument();
@@ -28,6 +29,7 @@ describe("Benefits component", () => {
     ).toBeInTheDocument();
   });
 
+  // Benefits with icons
   it("renders all benefits with their icons", () => {
     render(<Benefits />);
     expect(screen.getByTestId("use-online-icon")).toBeInTheDocument();
