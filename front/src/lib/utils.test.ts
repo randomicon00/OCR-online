@@ -52,12 +52,12 @@ describe("countCharacters", () => {
 
   // Test simple string
   it("returns the correct count for a string with no whitespace", () => {
-    expect(countCharacters("abc")).toBe(3);
+    expect(countCharacters("abcd")).toBe(4);
   });
 
   // Test whitespace trimmed
   it("returns the correct count for a string with leading/trailing whitespace", () => {
-    expect(countCharacters("   abc   ")).toBe(3);
+    expect(countCharacters("   abcd   ")).toBe(4);
   });
 
   // Test empty string
