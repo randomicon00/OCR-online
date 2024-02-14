@@ -206,8 +206,15 @@ func GetData(c *gin.Context) {
 }
 
 func AddData(c *gin.Context) {
-  log.Println("Data request")
+  log.Println("Add Data request")
 
   // TODO Insert the data to be displayed in the charts
+  return
+}
+
+func DeleteData(c *gin.Context) {
+  log.Println("Delete Data request")
+
+  // TODO Delete the data to be displayed in the charts
   return
 }
