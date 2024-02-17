@@ -212,9 +212,17 @@ func AddData(c *gin.Context) {
   return
 }
 
+func EditData(c *gin.Context) {
+  log.Println("Edit Data request")
+
+  // TODO Edit the data to be displayed in the charts
+  return
+}
+
 func DeleteData(c *gin.Context) {
   log.Println("Delete Data request")
 
   // TODO Delete the data to be displayed in the charts
   return
 }
+
