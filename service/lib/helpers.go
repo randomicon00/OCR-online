@@ -32,7 +32,7 @@ func PerformOCR(req *http.Request) (string, error) {
   return text, nil
 }
 
-func AddWatermark() {
+func AddWatermarkToImage() {
   // TODO implement watermark in an image
 }
 
