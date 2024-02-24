@@ -34,6 +34,5 @@ func PerformOCR(req *http.Request) (string, error) {
 
 func AddWatermarkToImage() {
   // TODO implement watermark in an image
-  // TODO this should be processed as a background process
 }
 
