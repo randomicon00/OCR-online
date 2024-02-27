@@ -28,14 +28,14 @@ func main() {
     })
   })
 
-  // TODO Move callback to controller
+  // TODO Move callback to Controllers folder
   r.GET("/heatlh", func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
       "message": "OCR service status: Online",
     })
   })
 
-  // TODO Move callback to controller
+  // TODO Move callback to Controllers folder
   r.GET("/result", func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
       "message": "my ocr text!",
