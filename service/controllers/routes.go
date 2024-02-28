@@ -226,9 +226,3 @@ func DeleteData(c *gin.Context) {
   return
 }
 
-func EditBulkData(c *gin.Context) {
-  log.Println("Edit Bulk Data request")
-
-  // TODO Edit the data in bulk to be displayed in the charts
-  return
-}
