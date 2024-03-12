@@ -226,3 +226,8 @@ func DeleteData(c *gin.Context) {
   return
 }
 
+func DeleteAllData(c *gin.Context) {
+
+  // TODO Delete all the data to be displayed in the charts
+  return
+}
